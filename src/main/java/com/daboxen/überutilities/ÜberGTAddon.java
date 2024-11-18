@@ -46,4 +46,9 @@ public class ÜberGTAddon implements IGTAddon {
         event.registerKey(CustomRecipeCapabilities.PRESSURE, Pair.of(PRESSURE_IN, PRESSURE_OUT));
     }
     */
+
+    @Override
+    public boolean requiresHighTier() {
+        return true;
+    }
 }
