@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package com.daboxen.überutilities;
 
 import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialEvent;
