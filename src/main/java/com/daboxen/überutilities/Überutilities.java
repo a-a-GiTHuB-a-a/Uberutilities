@@ -1,9 +1,11 @@
 package com.daboxen.überutilities;
 
+import com.daboxen.überutilities.additions.Übermaterials;
 import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialEvent;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialRegistryEvent;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.PostMaterialEvent;
+import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlags;
 import com.gregtechceu.gtceu.api.machine.MachineDefinition;
 import com.gregtechceu.gtceu.api.recipe.GTRecipeType;
 import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
@@ -23,7 +25,7 @@ import org.apache.logging.log4j.Logger;
 public class Überutilities {
     public static final String MOD_ID = "überutilities";
     public static final Logger LOGGER = LogManager.getLogger();
-    public static GTRegistrate EXAMPLE_REGISTRATE = GTRegistrate.create(ExampleMod.MOD_ID);
+    public static GTRegistrate EXAMPLE_REGISTRATE = GTRegistrate.create(Überutilities.MOD_ID);
 
     public Überutilities() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -41,6 +43,10 @@ public class Überutilities {
         // we need to register our object like this!
         MinecraftForge.EVENT_BUS.register(this);
     }
+
+    public static ResourceLocation id(String path) { //yoinked this from GCyR
+		return new ResourceLocation(MOD_ID, path);
+	}
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
@@ -61,12 +67,12 @@ public class Überutilities {
 
     // As well as this.
     private void addMaterials(MaterialEvent event) {
-        //CustomMaterials.init();
+        Übermaterials.init();
     }
 
     // This is optional, though.
     private void modifyMaterials(PostMaterialEvent event) {
-        //CustomMaterials.modify();
+        Übermaterials.modifyMaterials();
     }
 
     private void registerRecipeTypes(GTCEuAPI.RegisterEvent<ResourceLocation, GTRecipeType> event) {
