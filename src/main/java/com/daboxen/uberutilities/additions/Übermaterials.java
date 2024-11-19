@@ -18,19 +18,19 @@ public class Übermaterials {
 	public static Material AntiNeutronium;
 	public static void init() {
 		UpQuark = new Material.Builder(Überutilities.id("up_quark"))
-			.gas(0)
+			.gas(1)
 			.color(0xff0000)
 			.buildAndRegister();
 		AntiUpQuark = new Material.Builder(Überutilities.id("anti_up_quark"))
-			.gas(0)
+			.gas(1)
 			.color(0xff0000)
 			.buildAndRegister();
 		DownQuark = new Material.Builder(Überutilities.id("down_quark"))
-			.gas(0)
+			.gas(1)
 			.color(0xff0000)
 			.buildAndRegister();
 		AntiDownQuark = new Material.Builder(Überutilities.id("anti_down_quark"))
-			.gas(0)
+			.gas(1)
 			.color(0xff0000)
 			.buildAndRegister();
 		AntiNeutronium = new Material.Builder(Überutilities.id("anti_neutronium"))
