@@ -1,0 +1,5 @@
+{
+	"ldlib": {
+		"connection": "kubejs:block/neutronium_casing_ctm"
+	}
+}
