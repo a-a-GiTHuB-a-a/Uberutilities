@@ -1,0 +1,21 @@
+package com.daboxen.überutilities.additions.items.circuits;
+
+import com.gregtechceu.gtceu.api.GTValues;
+import net.minecraftforge.data.event.GatherDataEvent;
+
+public class CircuitHandler {
+	public static final CircuitType NEUTRINO = new CircuitType(GTValues.ZPM, 'i', "Neutrino", new String[]{
+		"Possibly Picoscopic!",
+		"Practically Impractical",
+		"Probably Carcinogenic",
+		"Plainly Puny"
+	});
+
+	public static void registerItems() {
+		NEUTRINO.registerItems();
+	}
+
+	public static void gatherData(GatherDataEvent event) {
+		NEUTRINO.gatherData(event);
+	}
+}

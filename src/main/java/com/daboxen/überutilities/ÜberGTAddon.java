@@ -12,7 +12,7 @@ import java.util.function.Consumer;
 public class ÜberGTAddon implements IGTAddon {
     @Override
     public GTRegistrate getRegistrate() {
-        return Überutilities.EXAMPLE_REGISTRATE;
+        return Überutilities.ÜBER_REGISTRATE;
     }
 
     @Override
