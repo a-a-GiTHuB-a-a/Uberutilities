@@ -15,6 +15,7 @@ import net.minecraft.world.item.Items;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -33,13 +34,7 @@ public class Überutilities {
     public Überutilities() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        modEventBus.addListener(this::register);
-        modEventBus.addListener(this::commonSetup);
-        modEventBus.addListener(this::clientSetup);
-        modEventBus.addListener(this::addMaterialRegistries);
-        modEventBus.addListener(this::addMaterials);
-        modEventBus.addListener(this::modifyMaterials);
-        modEventBus.addListener(this::gatherData);
+        modEventBus.register(this);
         modEventBus.addGenericListener(GTRecipeType.class, this::registerRecipeTypes);
         modEventBus.addGenericListener(MachineDefinition.class, this::registerMachines);
 
@@ -53,14 +48,17 @@ public class Überutilities {
 		return new ResourceLocation(MOD_ID, path);
 	}
 
+    @SubscribeEvent
     public void register(RegisterEvent event) {
         CircuitHandler.registerItems();
     }
 
+    @SubscribeEvent
     public void gatherData(GatherDataEvent event) {
         CircuitHandler.gatherData(event);
     }
 
+    @SubscribeEvent
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             LOGGER.info("Hello from common setup! This is *after* registries are done, so we can do this:");
@@ -68,30 +66,36 @@ public class Überutilities {
         });
     }
 
+    @SubscribeEvent
     private void clientSetup(final FMLClientSetupEvent event) {
         LOGGER.info("Hey, we're on Minecraft version {}!", Minecraft.getInstance().getLaunchedVersion());
     }
 
     // You MUST have this for custom materials.
     // Remember to register them not to GT's namespace, but your own.
+    @SubscribeEvent
     private void addMaterialRegistries(MaterialRegistryEvent event) {
         GTCEuAPI.materialManager.createRegistry(Überutilities.MOD_ID);
     }
 
     // As well as this.
+    @SubscribeEvent
     private void addMaterials(MaterialEvent event) {
         Übermaterials.init();
     }
 
     // This is optional, though.
+    @SubscribeEvent
     private void modifyMaterials(PostMaterialEvent event) {
         Übermaterials.modifyMaterials();
     }
 
+    @SubscribeEvent
     private void registerRecipeTypes(GTCEuAPI.RegisterEvent<ResourceLocation, GTRecipeType> event) {
         //CustomRecipeTypes.init();
     }
 
+    @SubscribeEvent
     private void registerMachines(GTCEuAPI.RegisterEvent<ResourceLocation, MachineDefinition> event) {
         //CustomMachines.init();
     }
