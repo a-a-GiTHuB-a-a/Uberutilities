@@ -1,4 +1,4 @@
-package com.daboxen.überutilities;
+package com.daboxen.uberutilities;
 
 import com.gregtechceu.gtceu.api.addon.GTAddon;
 import com.gregtechceu.gtceu.api.addon.IGTAddon;

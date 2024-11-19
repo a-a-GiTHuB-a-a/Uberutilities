@@ -1,7 +1,7 @@
-package com.daboxen.überutilities;
+package com.daboxen.uberutilities;
 
-import com.daboxen.überutilities.additions.Übermaterials;
-import com.daboxen.überutilities.additions.items.circuits.CircuitHandler;
+import com.daboxen.uberutilities.additions.Übermaterials;
+import com.daboxen.uberutilities.additions.items.circuits.CircuitHandler;
 import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialEvent;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialRegistryEvent;

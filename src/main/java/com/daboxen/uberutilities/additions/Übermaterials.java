@@ -1,6 +1,6 @@
-package com.daboxen.überutilities.additions;
+package com.daboxen.uberutilities.additions;
 
-import com.daboxen.überutilities.Überutilities;
+import com.daboxen.uberutilities.Überutilities;
 import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.data.chemical.Element;
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;

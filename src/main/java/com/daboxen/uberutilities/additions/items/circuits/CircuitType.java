@@ -1,6 +1,6 @@
-package com.daboxen.überutilities.additions.items.circuits;
+package com.daboxen.uberutilities.additions.items.circuits;
 
-import com.daboxen.überutilities.Überutilities;
+import com.daboxen.uberutilities.Überutilities;
 import com.gregtechceu.gtceu.api.GTValues;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;

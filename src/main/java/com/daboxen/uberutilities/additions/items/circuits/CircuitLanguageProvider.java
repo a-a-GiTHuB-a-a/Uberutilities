@@ -1,4 +1,4 @@
-package com.daboxen.überutilities.additions.items.circuits;
+package com.daboxen.uberutilities.additions.items.circuits;
 
 import com.gregtechceu.gtceu.api.GTValues;
 import net.minecraft.data.PackOutput;
