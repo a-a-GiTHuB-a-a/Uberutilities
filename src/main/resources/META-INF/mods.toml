@@ -18,7 +18,7 @@ license = "${mod_license}"
     # credits="Thanks to Mojang for making this great game" #optional
     # Some more fluff displayed in the Mods panel. Plug your stuff here!
     authors="${mod_author}"
-    description = '''${mod_description}'''
+    description = '''The mod that holds Übervolt together.'''
 
     [[dependencies.${mod_id}]]
         modId = "forge"
