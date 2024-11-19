@@ -5,6 +5,7 @@ import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.data.chemical.Element;
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;
 import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlags;
+import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconSet;
 import com.gregtechceu.gtceu.api.data.chemical.material.properties.PropertyKey;
 import com.gregtechceu.gtceu.api.data.chemical.material.properties.WireProperties;
 import com.gregtechceu.gtceu.api.registry.GTRegistries;
@@ -45,5 +46,9 @@ public class Übermaterials {
 		.buildAndRegister();
 	public static final Material AntiNeutronium = new Material.Builder(Überutilities.id("anti_neutronium"))
 		.element(ElementAntiNeutronium)
+		.color(0x000000)
+		.secondaryColor(0xffffff)
+		.iconSet(MaterialIconSet.RADIOACTIVE)
+		.ingot().fluid()
 		.buildAndRegister();
 }
