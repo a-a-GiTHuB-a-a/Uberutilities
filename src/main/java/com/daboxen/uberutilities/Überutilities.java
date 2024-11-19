@@ -59,7 +59,7 @@ public class Überutilities {
     }
 
     @SubscribeEvent
-    private void commonSetup(final FMLCommonSetupEvent event) {
+    public void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             LOGGER.info("Hello from common setup! This is *after* registries are done, so we can do this:");
             LOGGER.info("Look, I found a {}!", Items.DIAMOND);
@@ -67,36 +67,36 @@ public class Überutilities {
     }
 
     @SubscribeEvent
-    private void clientSetup(final FMLClientSetupEvent event) {
+    public void clientSetup(final FMLClientSetupEvent event) {
         LOGGER.info("Hey, we're on Minecraft version {}!", Minecraft.getInstance().getLaunchedVersion());
     }
 
     // You MUST have this for custom materials.
     // Remember to register them not to GT's namespace, but your own.
     @SubscribeEvent
-    private void addMaterialRegistries(MaterialRegistryEvent event) {
+    public void addMaterialRegistries(MaterialRegistryEvent event) {
         GTCEuAPI.materialManager.createRegistry(Überutilities.MOD_ID);
     }
 
     // As well as this.
     @SubscribeEvent
-    private void addMaterials(MaterialEvent event) {
+    public void addMaterials(MaterialEvent event) {
         Übermaterials.init();
     }
 
     // This is optional, though.
     @SubscribeEvent
-    private void modifyMaterials(PostMaterialEvent event) {
+    public void modifyMaterials(PostMaterialEvent event) {
         Übermaterials.modifyMaterials();
     }
 
     @SubscribeEvent
-    private void registerRecipeTypes(GTCEuAPI.RegisterEvent<ResourceLocation, GTRecipeType> event) {
+    public void registerRecipeTypes(GTCEuAPI.RegisterEvent<ResourceLocation, GTRecipeType> event) {
         //CustomRecipeTypes.init();
     }
 
     @SubscribeEvent
-    private void registerMachines(GTCEuAPI.RegisterEvent<ResourceLocation, MachineDefinition> event) {
+    public void registerMachines(GTCEuAPI.RegisterEvent<ResourceLocation, MachineDefinition> event) {
         //CustomMachines.init();
     }
 }
