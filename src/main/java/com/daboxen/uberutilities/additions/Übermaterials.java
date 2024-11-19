@@ -7,6 +7,7 @@ import com.gregtechceu.gtceu.api.data.chemical.material.Material;
 import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlags;
 import com.gregtechceu.gtceu.api.data.chemical.material.properties.PropertyKey;
 import com.gregtechceu.gtceu.api.data.chemical.material.properties.WireProperties;
+import com.gregtechceu.gtceu.api.registry.GTRegistries;
 import com.gregtechceu.gtceu.common.data.GTMaterials;
 
 public class Übermaterials {
@@ -17,7 +18,14 @@ public class Übermaterials {
         GTMaterials.Neutronium.addFlags(MaterialFlags.GENERATE_LONG_ROD, MaterialFlags.GENERATE_ROUND);
 	}
 
-	public static final Element ElementAntiNeutronium = new Element(0, 1000, -1, null, "anti_neutronium", "!Nt", false);
+	//thanks for the code! yoinked from cosmic core
+	public static Element createAndRegisterElement(long protons, long neutrons, long halfLifeSeconds, String decayTo, String name, String symbol, boolean isIsotope) {
+		Element element = new Element(protons, neutrons, halfLifeSeconds, decayTo, name, symbol, isIsotope);
+		GTRegistries.ELEMENTS.register(name, element);
+		return element;
+	}
+
+	public static final Element ElementAntiNeutronium = createAndRegisterElement(0, 1000, -1, null, "anti_neutronium", "!Nt", false);
 
 	public static final Material UpQuark = new Material.Builder(Überutilities.id("up_quark"))
 		.gas(0)
