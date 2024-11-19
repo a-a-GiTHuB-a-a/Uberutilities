@@ -4,7 +4,7 @@ import com.gregtechceu.gtceu.api.GTValues;
 import net.minecraftforge.data.event.GatherDataEvent;
 
 public class CircuitHandler {
-	public static final CircuitType NEUTRINO = new CircuitType(GTValues.ZPM, 'i', "Neutrino", new String[]{
+	public static CircuitType NEUTRINO = new CircuitType(GTValues.ZPM, 'i', "Neutrino", new String[]{
 		"Possibly Picoscopic!",
 		"Practically Impractical",
 		"Probably Carcinogenic",

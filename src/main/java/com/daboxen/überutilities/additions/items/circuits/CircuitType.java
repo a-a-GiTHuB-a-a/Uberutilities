@@ -2,15 +2,12 @@ package com.daboxen.überutilities.additions.items.circuits;
 
 import com.daboxen.überutilities.Überutilities;
 import com.gregtechceu.gtceu.api.GTValues;
-import com.gregtechceu.gtceu.data.recipe.CustomTags;
-
+import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
-import net.minecraftforge.common.data.LanguageProvider;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegisterEvent.RegisterHelper;
 import net.minecraftforge.registries.tags.ITagManager;
 
 public class CircuitType {
@@ -19,7 +16,7 @@ public class CircuitType {
 	String name;
 	String[] descriptions;
 
-	CircuitType(int tier, char color, String name, String[] descriptions) {
+	public CircuitType(int tier, char color, String name, String[] descriptions) {
 		this.tier = tier;
 		this.color = color;
 		this.name = name;
@@ -33,16 +30,34 @@ public class CircuitType {
 
 	public void registerItems() {
 		Überutilities.ÜBER_REGISTRATE.item(String.format("%s_processor", this.name.toLowerCase()), Item::new)
+			.lang(String.format("%s Processor", this.name))
 			.tag(getTag(tier))
+			.register();
+
+		Überutilities.ÜBER_REGISTRATE.item(String.format("%s_processor_assembly", this.name.toLowerCase()), Item::new)
+			.lang(String.format("%s Processor Assembly", this.name))	
+			.tag(getTag(tier+1))
+			.register();
+
+		Überutilities.ÜBER_REGISTRATE.item(String.format("%s_processor_computer", this.name.toLowerCase()), Item::new)
+			.lang(String.format("%s Processor Computer", this.name))	
+			.tag(getTag(tier+2))
+			.register();
+
+		Überutilities.ÜBER_REGISTRATE.item(String.format("%s_processor_mainframe", this.name.toLowerCase()), Item::new)
+			.lang(String.format("%s Processor Mainframe", this.name))	
+			.tag(getTag(tier+3))
 			.register();
 	}
 
 	public void gatherData(GatherDataEvent event) {
-		event.getGenerator().addProvider(
+		DataGenerator generator = event.getGenerator();
+		
+		generator.addProvider(
 			// Tell generator to run only when client assets are generating
 			event.includeClient(),
 			// Localizations for American English
-			output -> new CircuitLanguageProvider(output, Überutilities.MOD_ID, "en_us", this)
+			new CircuitLanguageProvider(generator.getPackOutput(), Überutilities.MOD_ID, "en_us", this)
 		);
 	}
 }
