@@ -26,7 +26,7 @@ import org.apache.logging.log4j.Logger;
 
 @Mod(Überutilities.MOD_ID)
 public class Überutilities {
-    public static final String MOD_ID = "überutilities";
+    public static final String MOD_ID = "uberutilities";
     public static final Logger LOGGER = LogManager.getLogger();
     public static GTRegistrate ÜBER_REGISTRATE = GTRegistrate.create(Überutilities.MOD_ID);
 
