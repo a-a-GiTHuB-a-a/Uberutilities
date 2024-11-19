@@ -17,7 +17,7 @@ public class Übermaterials {
         GTMaterials.Neutronium.addFlags(MaterialFlags.GENERATE_LONG_ROD, MaterialFlags.GENERATE_ROUND);
 	}
 
-	public static final Element ElementAntiNeutronium = new Element(0, -1000, -1, null, "anti_neutronium", "!Nt", false);
+	public static final Element ElementAntiNeutronium = new Element(0, 1000, -1, null, "anti_neutronium", "!Nt", false);
 
 	public static final Material UpQuark = new Material.Builder(Überutilities.id("up_quark"))
 		.gas(0)
