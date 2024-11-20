@@ -20,19 +20,23 @@ public class Übermaterials {
 		UpQuark = new Material.Builder(Überutilities.id("up_quark"))
 			.gas(1)
 			.color(0xff0000)
-			.buildAndRegister();
+			.buildAndRegister()
+			.setFormula("u");
 		AntiUpQuark = new Material.Builder(Überutilities.id("anti_up_quark"))
 			.gas(1)
 			.color(0xff0000)
-			.buildAndRegister();
+			.buildAndRegister()
+			.setFormula("!u");
 		DownQuark = new Material.Builder(Überutilities.id("down_quark"))
 			.gas(1)
-			.color(0xff0000)
-			.buildAndRegister();
+			.color(0x0000ff)
+			.buildAndRegister()
+			.setFormula("d");
 		AntiDownQuark = new Material.Builder(Überutilities.id("anti_down_quark"))
 			.gas(1)
-			.color(0xff0000)
-			.buildAndRegister();
+			.color(0x0000ff)
+			.buildAndRegister()
+			.setFormula("!d");
 		AntiNeutronium = new Material.Builder(Überutilities.id("anti_neutronium"))
 			.element(Überelements.AntiNeutronium)
 			.color(0x000000)
