@@ -60,10 +60,10 @@ public class Uberutilities {
 
 	@SubscribeEvent
 	public void commonSetup(final FMLCommonSetupEvent event) {
-		event.enqueueWork(() -> {
+		/*event.enqueueWork(() -> {
 			LOGGER.info("Hello from common setup! This is *after* registries are done, so we can do this:");
 			LOGGER.info("Look, I found a {}!", Items.DIAMOND);
-		});
+		});*/
 	}
 
 	@SubscribeEvent
