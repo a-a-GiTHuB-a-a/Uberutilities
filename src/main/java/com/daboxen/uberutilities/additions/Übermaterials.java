@@ -17,7 +17,7 @@ public class Übermaterials {
 
 	public static Material AntiNeutronium;
 	public static void init() {
-		UpQuark = new Material.Builder(Überutilities.id("up_quark"))
+		/*UpQuark = new Material.Builder(Überutilities.id("up_quark"))
 			.gas(1)
 			.color(0xff0000)
 			.buildAndRegister()
@@ -36,7 +36,8 @@ public class Übermaterials {
 			.gas(1)
 			.color(0x0000ff)
 			.buildAndRegister()
-			.setFormula("!d");
+			.setFormula("!d");*/
+
 		AntiNeutronium = new Material.Builder(Überutilities.id("anti_neutronium"))
 			.element(Überelements.AntiNeutronium)
 			.color(0x000000)
