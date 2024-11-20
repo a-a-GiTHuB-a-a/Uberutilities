@@ -27,76 +27,76 @@ import org.apache.logging.log4j.Logger;
 
 @Mod(Überutilities.MOD_ID)
 public class Überutilities {
-    public static final String MOD_ID = "uberutilities";
-    public static final Logger LOGGER = LogManager.getLogger();
-    public static GTRegistrate ÜBER_REGISTRATE = GTRegistrate.create(Überutilities.MOD_ID);
+	public static final String MOD_ID = "uberutilities";
+	public static final Logger LOGGER = LogManager.getLogger();
+	public static GTRegistrate ÜBER_REGISTRATE = GTRegistrate.create(Überutilities.MOD_ID);
 
-    public Überutilities() {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+	public Überutilities() {
+		IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        modEventBus.register(this);
-        modEventBus.addGenericListener(GTRecipeType.class, this::registerRecipeTypes);
-        modEventBus.addGenericListener(MachineDefinition.class, this::registerMachines);
+		modEventBus.register(this);
+		modEventBus.addGenericListener(GTRecipeType.class, this::registerRecipeTypes);
+		modEventBus.addGenericListener(MachineDefinition.class, this::registerMachines);
 
-        // Most other events are fired on Forge's bus.
-        // If we want to use annotations to register event listeners,
-        // we need to register our object like this!
-        MinecraftForge.EVENT_BUS.register(this);
-    }
+		// Most other events are fired on Forge's bus.
+		// If we want to use annotations to register event listeners,
+		// we need to register our object like this!
+		MinecraftForge.EVENT_BUS.register(this);
+	}
 
-    public static ResourceLocation id(String path) { //yoinked this from GCyR
+	public static ResourceLocation id(String path) { //yoinked this from GCyR
 		return new ResourceLocation(MOD_ID, path);
 	}
 
-    @SubscribeEvent
-    public void register(RegisterEvent event) {
-        CircuitHandler.registerItems();
-    }
+	@SubscribeEvent
+	public void register(RegisterEvent event) {
+		CircuitHandler.registerItems();
+	}
 
-    @SubscribeEvent
-    public void gatherData(GatherDataEvent event) {
-        CircuitHandler.gatherData(event);
-    }
+	@SubscribeEvent
+	public void gatherData(GatherDataEvent event) {
+		CircuitHandler.gatherData(event);
+	}
 
-    @SubscribeEvent
-    public void commonSetup(final FMLCommonSetupEvent event) {
-        event.enqueueWork(() -> {
-            LOGGER.info("Hello from common setup! This is *after* registries are done, so we can do this:");
-            LOGGER.info("Look, I found a {}!", Items.DIAMOND);
-        });
-    }
+	@SubscribeEvent
+	public void commonSetup(final FMLCommonSetupEvent event) {
+		event.enqueueWork(() -> {
+			LOGGER.info("Hello from common setup! This is *after* registries are done, so we can do this:");
+			LOGGER.info("Look, I found a {}!", Items.DIAMOND);
+		});
+	}
 
-    @SubscribeEvent
-    public void clientSetup(final FMLClientSetupEvent event) {
-        LOGGER.info("Hey, we're on Minecraft version {}!", Minecraft.getInstance().getLaunchedVersion());
-    }
+	@SubscribeEvent
+	public void clientSetup(final FMLClientSetupEvent event) {
+		LOGGER.info("Hey, we're on Minecraft version {}!", Minecraft.getInstance().getLaunchedVersion());
+	}
 
-    // You MUST have this for custom materials.
-    // Remember to register them not to GT's namespace, but your own.
-    @SubscribeEvent
-    public void addMaterialRegistries(MaterialRegistryEvent event) {
-        GTCEuAPI.materialManager.createRegistry(Überutilities.MOD_ID);
-    }
+	// You MUST have this for custom materials.
+	// Remember to register them not to GT's namespace, but your own.
+	@SubscribeEvent
+	public void addMaterialRegistries(MaterialRegistryEvent event) {
+		GTCEuAPI.materialManager.createRegistry(Überutilities.MOD_ID);
+	}
 
-    // As well as this.
-    @SubscribeEvent
-    public void addMaterials(MaterialEvent event) {
-        Übermaterials.init();
-    }
+	// As well as this.
+	@SubscribeEvent
+	public void addMaterials(MaterialEvent event) {
+		Übermaterials.init();
+	}
 
-    // This is optional, though.
-    @SubscribeEvent
-    public void modifyMaterials(PostMaterialEvent event) {
-        Übermaterials.modifyMaterials();
-    }
+	// This is optional, though.
+	@SubscribeEvent
+	public void modifyMaterials(PostMaterialEvent event) {
+		Übermaterials.modifyMaterials();
+	}
 
-    @SubscribeEvent
-    public void registerRecipeTypes(GTCEuAPI.RegisterEvent<ResourceLocation, GTRecipeType> event) {
-        //CustomRecipeTypes.init();
-    }
+	@SubscribeEvent
+	public void registerRecipeTypes(GTCEuAPI.RegisterEvent<ResourceLocation, GTRecipeType> event) {
+		//CustomRecipeTypes.init();
+	}
 
-    @SubscribeEvent
-    public void registerMachines(GTCEuAPI.RegisterEvent<ResourceLocation, MachineDefinition> event) {
-        //CustomMachines.init();
-    }
+	@SubscribeEvent
+	public void registerMachines(GTCEuAPI.RegisterEvent<ResourceLocation, MachineDefinition> event) {
+		//CustomMachines.init();
+	}
 }

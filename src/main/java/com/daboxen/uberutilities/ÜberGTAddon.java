@@ -11,51 +11,51 @@ import java.util.function.Consumer;
 @SuppressWarnings("unused")
 @GTAddon
 public class ÜberGTAddon implements IGTAddon {
-    @Override
-    public GTRegistrate getRegistrate() {
-        return Überutilities.ÜBER_REGISTRATE;
-    }
+	@Override
+	public GTRegistrate getRegistrate() {
+		return Überutilities.ÜBER_REGISTRATE;
+	}
 
-    @Override
-    public void initializeAddon() {
+	@Override
+	public void initializeAddon() {
 
-    }
+	}
 
-    @Override
-    public void registerElements() {
-        IGTAddon.super.registerElements();
-        Überelements.init();
-    }
+	@Override
+	public void registerElements() {
+		IGTAddon.super.registerElements();
+		Überelements.init();
+	}
 
-    @Override
-    public String addonModId() {
-        return Überutilities.MOD_ID;
-    }
+	@Override
+	public String addonModId() {
+		return Überutilities.MOD_ID;
+	}
 
-    @Override
-    public void registerTagPrefixes() {
-        //CustomTagPrefixes.init();
-    }
+	@Override
+	public void registerTagPrefixes() {
+		//CustomTagPrefixes.init();
+	}
 
-    @Override
-    public void addRecipes(Consumer<FinishedRecipe> provider) {
-        //CustomRecipes.init(provider);
-    }
-    
-    // If you have custom ingredient types, uncomment this & change to match your capability.
-    // KubeJS WILL REMOVE YOUR RECIPES IF THESE ARE NOT REGISTERED.
-    /*
-    public static final ContentJS<Double> PRESSURE_IN = new ContentJS<>(NumberComponent.ANY_DOUBLE, GregitasRecipeCapabilities.PRESSURE, false);
-    public static final ContentJS<Double> PRESSURE_OUT = new ContentJS<>(NumberComponent.ANY_DOUBLE, GregitasRecipeCapabilities.PRESSURE, true);
+	@Override
+	public void addRecipes(Consumer<FinishedRecipe> provider) {
+		//CustomRecipes.init(provider);
+	}
+	
+	// If you have custom ingredient types, uncomment this & change to match your capability.
+	// KubeJS WILL REMOVE YOUR RECIPES IF THESE ARE NOT REGISTERED.
+	/*
+	public static final ContentJS<Double> PRESSURE_IN = new ContentJS<>(NumberComponent.ANY_DOUBLE, GregitasRecipeCapabilities.PRESSURE, false);
+	public static final ContentJS<Double> PRESSURE_OUT = new ContentJS<>(NumberComponent.ANY_DOUBLE, GregitasRecipeCapabilities.PRESSURE, true);
 
-    @Override
-    public void registerRecipeKeys(KJSRecipeKeyEvent event) {
-        event.registerKey(CustomRecipeCapabilities.PRESSURE, Pair.of(PRESSURE_IN, PRESSURE_OUT));
-    }
-    */
+	@Override
+	public void registerRecipeKeys(KJSRecipeKeyEvent event) {
+		event.registerKey(CustomRecipeCapabilities.PRESSURE, Pair.of(PRESSURE_IN, PRESSURE_OUT));
+	}
+	*/
 
-    @Override
-    public boolean requiresHighTier() {
-        return true;
-    }
+	@Override
+	public boolean requiresHighTier() {
+		return true;
+	}
 }
