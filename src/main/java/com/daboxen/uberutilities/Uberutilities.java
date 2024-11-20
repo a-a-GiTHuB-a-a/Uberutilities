@@ -68,7 +68,7 @@ public class Uberutilities {
 
 	@SubscribeEvent
 	public void clientSetup(final FMLClientSetupEvent event) {
-		LOGGER.info("Hey, we're on Minecraft version {}!", Minecraft.getInstance().getLaunchedVersion());
+		//LOGGER.info("Hey, we're on Minecraft version {}!", Minecraft.getInstance().getLaunchedVersion());
 	}
 
 	// You MUST have this for custom materials.
