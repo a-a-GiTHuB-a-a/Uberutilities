@@ -1,6 +1,6 @@
 package com.daboxen.uberutilities;
 
-import com.daboxen.uberutilities.additions.Überelements;
+import com.daboxen.uberutilities.additions.Uberelements;
 import com.gregtechceu.gtceu.api.addon.GTAddon;
 import com.gregtechceu.gtceu.api.addon.IGTAddon;
 import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
@@ -10,10 +10,10 @@ import java.util.function.Consumer;
 
 @SuppressWarnings("unused")
 @GTAddon
-public class ÜberGTAddon implements IGTAddon {
+public class UberGTAddon implements IGTAddon {
 	@Override
 	public GTRegistrate getRegistrate() {
-		return Überutilities.ÜBER_REGISTRATE;
+		return Uberutilities.ÜBER_REGISTRATE;
 	}
 
 	@Override
@@ -24,12 +24,12 @@ public class ÜberGTAddon implements IGTAddon {
 	@Override
 	public void registerElements() {
 		IGTAddon.super.registerElements();
-		Überelements.init();
+		Uberelements.init();
 	}
 
 	@Override
 	public String addonModId() {
-		return Überutilities.MOD_ID;
+		return Uberutilities.MOD_ID;
 	}
 
 	@Override

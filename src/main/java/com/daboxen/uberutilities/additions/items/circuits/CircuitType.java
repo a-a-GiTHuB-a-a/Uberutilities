@@ -1,6 +1,6 @@
 package com.daboxen.uberutilities.additions.items.circuits;
 
-import com.daboxen.uberutilities.Überutilities;
+import com.daboxen.uberutilities.Uberutilities;
 import com.gregtechceu.gtceu.api.GTValues;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
@@ -29,22 +29,22 @@ public class CircuitType {
 	}
 
 	public void registerItems() {
-		Überutilities.ÜBER_REGISTRATE.item(String.format("%s_processor", this.name.toLowerCase()), Item::new)
+		Uberutilities.ÜBER_REGISTRATE.item(String.format("%s_processor", this.name.toLowerCase()), Item::new)
 			.lang(String.format("%s Processor", this.name))
 			.tag(getTag(tier))
 			.register();
 
-		Überutilities.ÜBER_REGISTRATE.item(String.format("%s_processor_assembly", this.name.toLowerCase()), Item::new)
+		Uberutilities.ÜBER_REGISTRATE.item(String.format("%s_processor_assembly", this.name.toLowerCase()), Item::new)
 			.lang(String.format("%s Processor Assembly", this.name))	
 			.tag(getTag(tier+1))
 			.register();
 
-		Überutilities.ÜBER_REGISTRATE.item(String.format("%s_processor_computer", this.name.toLowerCase()), Item::new)
+		Uberutilities.ÜBER_REGISTRATE.item(String.format("%s_processor_computer", this.name.toLowerCase()), Item::new)
 			.lang(String.format("%s Processor Computer", this.name))	
 			.tag(getTag(tier+2))
 			.register();
 
-		Überutilities.ÜBER_REGISTRATE.item(String.format("%s_processor_mainframe", this.name.toLowerCase()), Item::new)
+		Uberutilities.ÜBER_REGISTRATE.item(String.format("%s_processor_mainframe", this.name.toLowerCase()), Item::new)
 			.lang(String.format("%s Processor Mainframe", this.name))	
 			.tag(getTag(tier+3))
 			.register();
@@ -57,7 +57,7 @@ public class CircuitType {
 			// Tell generator to run only when client assets are generating
 			event.includeClient(),
 			// Localizations for American English
-			new CircuitLanguageProvider(generator.getPackOutput(), Überutilities.MOD_ID, "en_us", this)
+			new CircuitLanguageProvider(generator.getPackOutput(), Uberutilities.MOD_ID, "en_us", this)
 		);
 	}
 }

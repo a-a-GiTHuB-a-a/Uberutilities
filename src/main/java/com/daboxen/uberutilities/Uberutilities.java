@@ -1,6 +1,6 @@
 package com.daboxen.uberutilities;
 
-import com.daboxen.uberutilities.additions.Übermaterials;
+import com.daboxen.uberutilities.additions.Ubermaterials;
 import com.daboxen.uberutilities.additions.items.circuits.CircuitHandler;
 import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialEvent;
@@ -25,13 +25,13 @@ import net.minecraftforge.registries.RegisterEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-@Mod(Überutilities.MOD_ID)
-public class Überutilities {
+@Mod(Uberutilities.MOD_ID)
+public class Uberutilities {
 	public static final String MOD_ID = "uberutilities";
 	public static final Logger LOGGER = LogManager.getLogger();
-	public static GTRegistrate ÜBER_REGISTRATE = GTRegistrate.create(Überutilities.MOD_ID);
+	public static GTRegistrate ÜBER_REGISTRATE = GTRegistrate.create(Uberutilities.MOD_ID);
 
-	public Überutilities() {
+	public Uberutilities() {
 		IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
 		modEventBus.register(this);
@@ -75,19 +75,19 @@ public class Überutilities {
 	// Remember to register them not to GT's namespace, but your own.
 	@SubscribeEvent
 	public void addMaterialRegistries(MaterialRegistryEvent event) {
-		GTCEuAPI.materialManager.createRegistry(Überutilities.MOD_ID);
+		GTCEuAPI.materialManager.createRegistry(Uberutilities.MOD_ID);
 	}
 
 	// As well as this.
 	@SubscribeEvent
 	public void addMaterials(MaterialEvent event) {
-		Übermaterials.init();
+		Ubermaterials.init();
 	}
 
 	// This is optional, though.
 	@SubscribeEvent
 	public void modifyMaterials(PostMaterialEvent event) {
-		Übermaterials.modifyMaterials();
+		Ubermaterials.modifyMaterials();
 	}
 
 	@SubscribeEvent

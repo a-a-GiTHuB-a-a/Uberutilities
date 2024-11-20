@@ -3,7 +3,7 @@ package com.daboxen.uberutilities.additions;
 import com.gregtechceu.gtceu.api.data.chemical.Element;
 import com.gregtechceu.gtceu.api.registry.GTRegistries;
 
-public class Überelements {
+public class Uberelements {
 	public static void init() {}
 
 	//thanks for the code! yoinked from cosmic core
