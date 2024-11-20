@@ -42,7 +42,7 @@ public class Ubermaterials {
 			.element(Uberelements.AntiNeutronium)
 			.color(0x000000)
 			.secondaryColor(0xffffff)
-			.iconSet(MaterialIconSet.RADIOACTIVE)
+			.iconSet(IconSets.WHITE_OUTLINE)
 			.ingot().liquid(100000)
 			.buildAndRegister();
 	}

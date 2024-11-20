@@ -1,0 +1,6 @@
+{
+	"parent": "gtceu:item/material_sets/metallic",
+	"textures": {
+		"layer2": "uberutilities:item/material_sets/metallic/ingot_overlay"
+	}
+}
