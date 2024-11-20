@@ -17,6 +17,8 @@ public class Ubermaterials {
 
 	public static Material AntiNeutronium;
 	public static void init() {
+		IconSets.init();
+
 		UpQuark = new Material.Builder(Uberutilities.id("up_quark"))
 			.gas(1)
 			.color(0xff0000)
