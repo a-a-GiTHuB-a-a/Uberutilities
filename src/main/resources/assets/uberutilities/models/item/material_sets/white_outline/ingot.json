@@ -1,6 +1,6 @@
 {
 	"parent": "gtceu:item/material_sets/metallic/ingot",
 	"textures": {
-		"layer3": "uberutilities:item/material_sets/white_outline/ingot_overlay"
+		"layer3": "uberutilities:item/material_sets/white_outline/ingot_outline"
 	}
 }

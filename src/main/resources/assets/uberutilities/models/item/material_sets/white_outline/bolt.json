@@ -1,0 +1,6 @@
+{
+	"parent": "gtceu:item/material_sets/metallic/bolt",
+	"textures": {
+		"layer3": "uberutilities:item/material_sets/white_outline/bolt_outline"
+	}
+}
