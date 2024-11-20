@@ -1,5 +1,6 @@
 package com.daboxen.uberutilities;
 
+import com.daboxen.uberutilities.additions.Überelements;
 import com.gregtechceu.gtceu.api.addon.GTAddon;
 import com.gregtechceu.gtceu.api.addon.IGTAddon;
 import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
@@ -18,6 +19,12 @@ public class ÜberGTAddon implements IGTAddon {
     @Override
     public void initializeAddon() {
 
+    }
+
+    @Override
+    public void registerElements() {
+        IGTAddon.super.registerElements();
+        Überelements.init();
     }
 
     @Override
