@@ -38,7 +38,7 @@ public class Übermaterials {
 			.color(0x000000)
 			.secondaryColor(0xffffff)
 			.iconSet(MaterialIconSet.RADIOACTIVE)
-			.ingot().fluid()
+			.ingot().liquid(100000)
 			.buildAndRegister();
 	}
 
