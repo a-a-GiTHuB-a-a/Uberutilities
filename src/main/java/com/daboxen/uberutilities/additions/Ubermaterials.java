@@ -42,7 +42,7 @@ public class Ubermaterials {
 		AntiNeutronium = new Material.Builder(Uberutilities.id("anti_neutronium"))
 			.element(Uberelements.AntiNeutronium)
 			.color(0xff0000/*0x000000*/)//temp
-			.secondaryColor(0x0000ff/*0xffffff*/)
+			.secondaryColor(0xffffff)
 			.iconSet(IconSets.WHITE_OUTLINE)
 			.ingot().liquid(100000)
 			.buildAndRegister();
