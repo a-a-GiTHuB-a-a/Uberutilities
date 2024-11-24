@@ -62,7 +62,7 @@ public class Ubermaterials {
 					FluidPipeProperties oldProp = material.getProperty(PropertyKey.FLUID_PIPE);
 					ExtendedFluidPipeProperties newProp = new ExtendedFluidPipeProperties(
 						oldProp.getMaxFluidTemperature(),
-						oldProp.getThroughput(),
+						(int)oldProp.getThroughput(),
 						oldProp.isGasProof(),
 						oldProp.isAcidProof(),
 						oldProp.isCryoProof(),
