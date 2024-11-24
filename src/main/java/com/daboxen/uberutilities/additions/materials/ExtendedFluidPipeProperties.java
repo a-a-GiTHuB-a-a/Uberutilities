@@ -27,15 +27,15 @@ public class ExtendedFluidPipeProperties extends FluidPipeProperties {
 	@Override
 	public String toString() {
 		return "FluidPipeProperties{" +
-				"maxFluidTemperature=" + getMaxFluidTemperature() +
-				", throughput=" + getThroughput() +
-				", gasProof=" + isGasProof() +
-				", acidProof=" + isAcidProof() +
-				", cryoProof=" + isCryoProof() +
-				", plasmaProof=" + isPlasmaProof() +
-				", antimatterProof=" + isAntimatterProof() +
-				", channels=" + getChannels() +
-				'}';
+			"maxFluidTemperature=" + getMaxFluidTemperature() +
+			", throughput=" + getThroughput() +
+			", gasProof=" + isGasProof() +
+			", acidProof=" + isAcidProof() +
+			", cryoProof=" + isCryoProof() +
+			", plasmaProof=" + isPlasmaProof() +
+			", antimatterProof=" + isAntimatterProof() +
+			", channels=" + getChannels() +
+			'}';
 	}
 
 	public boolean isAntimatterProof() {
