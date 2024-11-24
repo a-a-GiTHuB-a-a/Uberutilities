@@ -9,6 +9,7 @@ import com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidPipeProp
 import com.gregtechceu.gtceu.api.data.chemical.material.properties.PropertyKey;
 import com.gregtechceu.gtceu.api.data.chemical.material.properties.WireProperties;
 import com.gregtechceu.gtceu.api.data.chemical.material.registry.MaterialRegistry;
+import com.gregtechceu.gtceu.api.fluids.FluidBuilder;
 import com.gregtechceu.gtceu.common.data.GTMaterials;
 
 public class Ubermaterials {
@@ -27,7 +28,7 @@ public class Ubermaterials {
 			.buildAndRegister()
 			.setFormula("u");
 		AntiUpQuark = new Material.Builder(Uberutilities.id("anti_up_quark"))
-			.gas(1)
+			.gas(new FluidBuilder().attribute(ExtendedFluidAttributes.ANTIMATTER).temperature(1))
 			.color(0xff0000)
 			.buildAndRegister()
 			.setFormula("!u");
@@ -37,7 +38,7 @@ public class Ubermaterials {
 			.buildAndRegister()
 			.setFormula("d");
 		AntiDownQuark = new Material.Builder(Uberutilities.id("anti_down_quark"))
-			.gas(1)
+		.gas(new FluidBuilder().attribute(ExtendedFluidAttributes.ANTIMATTER).temperature(1))
 			.color(0x0000ff)
 			.buildAndRegister()
 			.setFormula("!d");
@@ -47,7 +48,7 @@ public class Ubermaterials {
 			.color(0xff0000/*0x000000*/)//temp
 			.secondaryColor(0xffffff)
 			.iconSet(IconSets.WHITE_OUTLINE)
-			.ingot().liquid(100000)
+			.ingot().liquid(new FluidBuilder().attribute(ExtendedFluidAttributes.ANTIMATTER).temperature(100000))
 			.buildAndRegister();
 	}
 
