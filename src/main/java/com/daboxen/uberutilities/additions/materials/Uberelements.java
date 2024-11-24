@@ -1,4 +1,4 @@
-package com.daboxen.uberutilities.additions;
+package com.daboxen.uberutilities.additions.materials;
 
 import com.gregtechceu.gtceu.api.data.chemical.Element;
 import com.gregtechceu.gtceu.api.registry.GTRegistries;

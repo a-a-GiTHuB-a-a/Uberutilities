@@ -1,4 +1,4 @@
-package com.daboxen.uberutilities.additions;
+package com.daboxen.uberutilities.additions.materials;
 
 import com.daboxen.uberutilities.Uberutilities;
 import com.gregtechceu.gtceu.api.GTCEuAPI;

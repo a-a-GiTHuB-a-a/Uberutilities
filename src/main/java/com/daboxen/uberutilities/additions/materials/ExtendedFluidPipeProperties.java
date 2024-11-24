@@ -1,6 +1,7 @@
+package com.daboxen.uberutilities.additions.materials;
+
 import lombok.Getter;
 import lombok.Setter;
-
 import com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidPipeProperties;
 
 public class ExtendedFluidPipeProperties extends FluidPipeProperties {

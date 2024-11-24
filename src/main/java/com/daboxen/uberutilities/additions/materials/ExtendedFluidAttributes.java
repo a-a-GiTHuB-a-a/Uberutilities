@@ -1,6 +1,7 @@
+package com.daboxen.uberutilities.additions.materials;
+
 import com.daboxen.uberutilities.Uberutilities;
 import com.gregtechceu.gtceu.api.fluids.attribute.FluidAttribute;
-import com.gregtechceu.gtceu.api.fluids.attribute.FluidAttributes;
 import net.minecraft.network.chat.Component;
 
 public final class ExtendedFluidAttributes {
