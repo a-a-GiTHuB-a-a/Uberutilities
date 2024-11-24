@@ -1,6 +1,6 @@
 package com.daboxen.uberutilities;
 
-import com.daboxen.uberutilities.additions.Uberelements;
+import com.daboxen.uberutilities.additions.materials.Uberelements;
 import com.gregtechceu.gtceu.api.addon.GTAddon;
 import com.gregtechceu.gtceu.api.addon.IGTAddon;
 import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;

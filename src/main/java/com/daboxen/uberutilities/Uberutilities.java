@@ -1,6 +1,6 @@
 package com.daboxen.uberutilities;
 
-import com.daboxen.uberutilities.additions.Ubermaterials;
+import com.daboxen.uberutilities.additions.materials.Ubermaterials;
 import com.daboxen.uberutilities.additions.items.circuits.CircuitHandler;
 import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialEvent;
