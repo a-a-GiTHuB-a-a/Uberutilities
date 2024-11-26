@@ -19,6 +19,8 @@ public class Ubermaterials {
 	public static Material AntiDownQuark;
 
 	public static Material AntiNeutronium;
+
+	public static final PropertyKey<ExtendedFluidPipeProperties> EXTENDED_FLUID_PIPE = new PropertyKey<>("extended_fluid_pipe", ExtendedFluidPipeProperties.class);
 	public static void init() {
 		IconSets.init();
 
@@ -70,11 +72,11 @@ public class Ubermaterials {
 						false,
 						oldProp.getChannels()
 					);
-					material.setProperty(PropertyKey.FLUID_PIPE, newProp);
+					material.setProperty(EXTENDED_FLUID_PIPE, newProp);
 				}
 			}
 		}
 
-		((ExtendedFluidPipeProperties)(GTMaterials.NaquadahAlloy.getProperty(PropertyKey.FLUID_PIPE))).setAntimatterProof(true);
+		GTMaterials.NaquadahAlloy.getProperty(EXTENDED_FLUID_PIPE).setAntimatterProof(true);
 	}
 }

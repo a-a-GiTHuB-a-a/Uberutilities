@@ -2,8 +2,9 @@ package com.daboxen.uberutilities.additions.materials;
 
 import lombok.Setter;
 import com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidPipeProperties;
+import com.gregtechceu.gtceu.api.data.chemical.material.properties.IMaterialProperty;
 
-public class ExtendedFluidPipeProperties extends FluidPipeProperties {
+public class ExtendedFluidPipeProperties extends FluidPipeProperties implements IMaterialProperty<ExtendedFluidPipeProperties> {
 	@Setter
 	private boolean antimatterProof;
 
