@@ -1,12 +1,14 @@
 package com.daboxen.uberutilities.additions.materials;
 
-import lombok.Setter;
 import com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidPipeProperties;
 import com.gregtechceu.gtceu.api.data.chemical.material.properties.IMaterialProperty;
 
 public class ExtendedFluidPipeProperties extends FluidPipeProperties implements IMaterialProperty<ExtendedFluidPipeProperties> {
-	@Setter
 	private boolean antimatterProof;
+
+	public void setAntimatterProof(boolean val) {
+		antimatterProof = val;
+	}
 
 	public ExtendedFluidPipeProperties(int maxFluidTemperature, int throughput, boolean gasProof, boolean acidProof, boolean cryoProof, boolean plasmaProof, boolean antimatterProof, int channels) {
 		super(maxFluidTemperature, throughput, gasProof, acidProof, cryoProof, plasmaProof, channels);
@@ -21,7 +23,7 @@ public class ExtendedFluidPipeProperties extends FluidPipeProperties implements 
 	public boolean equals(Object o) {
 		if (this == o) return true;
 		if (!(o instanceof ExtendedFluidPipeProperties that)) return false;
-		return (FluidPipeProperties)(this) == (FluidPipeProperties)(that) && antimatterProof == that.antimatterProof;
+		return super.equals(that) && antimatterProof == that.antimatterProof;
 	}
 
 	@Override
