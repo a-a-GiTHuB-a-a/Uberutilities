@@ -32,22 +32,22 @@ public class CircuitType {
 		Uberutilities.ÜBER_REGISTRATE.item(String.format("%s_processor", this.name.toLowerCase()), Item::new)
 			.lang(String.format("%s Processor", this.name))
 			.tag(getTag(tier))
-			.register();
+			.build();
 
 		Uberutilities.ÜBER_REGISTRATE.item(String.format("%s_processor_assembly", this.name.toLowerCase()), Item::new)
 			.lang(String.format("%s Processor Assembly", this.name))	
 			.tag(getTag(tier+1))
-			.register();
+			.build();
 
 		Uberutilities.ÜBER_REGISTRATE.item(String.format("%s_processor_computer", this.name.toLowerCase()), Item::new)
 			.lang(String.format("%s Processor Computer", this.name))	
 			.tag(getTag(tier+2))
-			.register();
+			.build();
 
 		Uberutilities.ÜBER_REGISTRATE.item(String.format("%s_processor_mainframe", this.name.toLowerCase()), Item::new)
 			.lang(String.format("%s Processor Mainframe", this.name))	
 			.tag(getTag(tier+3))
-			.register();
+			.build();
 	}
 
 	public void gatherData(GatherDataEvent event) {
