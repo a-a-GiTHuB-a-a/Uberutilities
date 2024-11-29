@@ -20,7 +20,9 @@ public class Ubermaterials {
 
 	public static Material AntiNeutronium;
 
-	public static final PropertyKey<ExtendedFluidPipeProperties> EXTENDED_FLUID_PIPE = new PropertyKey<>("extended_fluid_pipe", ExtendedFluidPipeProperties.class);
+	public static Material Amogusium;
+
+	//public static final PropertyKey<ExtendedFluidPipeProperties> EXTENDED_FLUID_PIPE = new PropertyKey<>("extended_fluid_pipe", ExtendedFluidPipeProperties.class);
 	public static void init() {
 		IconSets.init();
 
@@ -52,19 +54,28 @@ public class Ubermaterials {
 			.iconSet(IconSets.WHITE_OUTLINE)
 			.ingot().liquid(new FluidBuilder().attribute(ExtendedFluidAttributes.ANTIMATTER).temperature(100000))
 			.buildAndRegister();
+
+		Amogusium = new Material.Builder(Uberutilities.id("amogusium"))
+			.element(Uberelements.Amogusium)
+			.color(0xff0000)
+			.secondaryColor(0x7fbfff)
+			.iconSet(IconSets.DULL) //todo: made a sus one
+			.ingot().liquid(500).plasma(1000000)
+			.buildAndRegister();
 	}
 
 	public static void modifyMaterials() {
 		GTMaterials.Duranium.setProperty(PropertyKey.WIRE, new WireProperties((int)GTValues.V[GTValues.UHV], 4, 96));
         GTMaterials.Neutronium.addFlags(MaterialFlags.GENERATE_LONG_ROD, MaterialFlags.GENERATE_ROUND);
 
-		for (MaterialRegistry registry : GTCEuAPI.materialManager.getRegistries()) {
+		//TODO: uncomment once my PR is merged
+		/*for (MaterialRegistry registry : GTCEuAPI.materialManager.getRegistries()) {
 			for (Material material : registry.getAllMaterials()) {
 				if (material.hasProperty(PropertyKey.FLUID_PIPE)) {
 					FluidPipeProperties oldProp = material.getProperty(PropertyKey.FLUID_PIPE);
 					ExtendedFluidPipeProperties newProp = new ExtendedFluidPipeProperties(
 						oldProp.getMaxFluidTemperature(),
-						(int)oldProp.getThroughput(),
+						oldProp.getThroughput(),
 						oldProp.isGasProof(),
 						oldProp.isAcidProof(),
 						oldProp.isCryoProof(),
@@ -77,6 +88,6 @@ public class Ubermaterials {
 			}
 		}
 
-		GTMaterials.NaquadahAlloy.getProperty(EXTENDED_FLUID_PIPE).setAntimatterProof(true);
+		GTMaterials.NaquadahAlloy.getProperty(EXTENDED_FLUID_PIPE).setAntimatterProof(true);*/
 	}
 }

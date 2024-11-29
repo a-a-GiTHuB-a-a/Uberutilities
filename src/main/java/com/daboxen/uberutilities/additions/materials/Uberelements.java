@@ -14,4 +14,5 @@ public class Uberelements {
 	}
 
 	public static final Element AntiNeutronium = createAndRegisterElement(0, 1000, -1, null, "anti_neutronium", "!Nt", false);
+	public static final Element Amogusium = createAndRegisterElement(61, 145, -1, null, "amogusium", "Sus", false);
 }
