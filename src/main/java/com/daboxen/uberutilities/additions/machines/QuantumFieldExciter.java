@@ -28,6 +28,6 @@ public class QuantumFieldExciter {
 		).register();
 	
 	public static void init() {
-		//amogus
+		//making things
 	}
 }
