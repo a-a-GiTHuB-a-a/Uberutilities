@@ -1,5 +1,6 @@
 package com.daboxen.uberutilities;
 
+import com.daboxen.uberutilities.additions.machines.MachineRegistrar;
 import com.daboxen.uberutilities.additions.materials.Ubermaterials;
 import com.daboxen.uberutilities.additions.items.circuits.CircuitHandler;
 import com.gregtechceu.gtceu.api.GTCEuAPI;
@@ -17,8 +18,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fml.javafmlmod.FMLModContainer;
 import net.minecraftforge.registries.RegisterEvent;
 
 import org.apache.logging.log4j.LogManager;
@@ -28,7 +27,7 @@ import org.apache.logging.log4j.Logger;
 public class Uberutilities {
 	public static final String MOD_ID = "uberutilities";
 	public static final Logger LOGGER = LogManager.getLogger();
-	public static GTRegistrate ÜBER_REGISTRATE = GTRegistrate.create(Uberutilities.MOD_ID);
+	public static GTRegistrate UBER_REGISTRATE = GTRegistrate.create(Uberutilities.MOD_ID);
 
 	public Uberutilities(IEventBus modEventBus) {
 
@@ -95,6 +94,6 @@ public class Uberutilities {
 
 	@SubscribeEvent
 	public void registerMachines(GTCEuAPI.RegisterEvent<ResourceLocation, MachineDefinition> event) {
-		//CustomMachines.init();
+		MachineRegistrar.init();
 	}
 }

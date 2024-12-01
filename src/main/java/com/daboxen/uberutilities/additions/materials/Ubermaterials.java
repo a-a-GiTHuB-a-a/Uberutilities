@@ -59,7 +59,7 @@ public class Ubermaterials {
 			.element(Uberelements.Amogusium)
 			.color(0xff0000)
 			.secondaryColor(0x7fbfff)
-			//.iconSet(IconSets.DULL) //todo: made a sus one
+			.iconSet(IconSets.SUS)
 			.ingot().liquid(500).plasma(1000000)
 			.buildAndRegister();
 	}

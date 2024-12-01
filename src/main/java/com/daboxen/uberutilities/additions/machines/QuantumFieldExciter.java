@@ -1,0 +1,33 @@
+package com.daboxen.uberutilities.additions.machines;
+
+import com.daboxen.uberutilities.additions.items.Uberblocks;
+import com.daboxen.uberutilities.api.RecipeTypes;
+import com.gregtechceu.gtceu.api.data.RotationState;
+import com.gregtechceu.gtceu.api.machine.MultiblockMachineDefinition;
+import com.gregtechceu.gtceu.api.machine.multiblock.WorkableElectricMultiblockMachine;
+import com.gregtechceu.gtceu.api.pattern.FactoryBlockPattern;
+import com.gregtechceu.gtceu.api.pattern.Predicates;
+import com.gregtechceu.gtceu.api.recipe.OverclockingLogic;
+import com.gregtechceu.gtceu.common.data.GTRecipeModifiers;
+
+import static com.daboxen.uberutilities.Uberutilities.UBER_REGISTRATE;
+
+public class QuantumFieldExciter {
+	public static final MultiblockMachineDefinition FIELD_EXCITER = UBER_REGISTRATE.multiblock("field_exciter", WorkableElectricMultiblockMachine::new)
+		.rotationState(RotationState.ALL)
+		.recipeType(RecipeTypes.FIELD_EXCITER)
+		.recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(new OverclockingLogic(1/3.6, OverclockingLogic.STD_VOLTAGE_FACTOR, true)))
+		.appearanceBlock(Uberblocks.NEUTRONIUM_MACHINE_CASING)
+		.pattern(definition -> FactoryBlockPattern.start()
+			.aisle("CCC")
+			.aisle("CMC")
+			.where('M', Predicates.controller(Predicates.blocks(definition.get())))
+			.where('C', Predicates.blocks(Uberblocks.NEUTRONIUM_MACHINE_CASING.get())
+				.or(Predicates.autoAbilities(RecipeTypes.FIELD_EXCITER))
+			).build()
+		).register();
+	
+	public static void init() {
+		//amogus
+	}
+}

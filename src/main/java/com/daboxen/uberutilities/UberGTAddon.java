@@ -13,7 +13,7 @@ import java.util.function.Consumer;
 public class UberGTAddon implements IGTAddon {
 	@Override
 	public GTRegistrate getRegistrate() {
-		return Uberutilities.ÜBER_REGISTRATE;
+		return Uberutilities.UBER_REGISTRATE;
 	}
 
 	@Override
