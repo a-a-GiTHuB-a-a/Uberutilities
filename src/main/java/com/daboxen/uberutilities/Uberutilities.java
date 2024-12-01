@@ -3,6 +3,7 @@ package com.daboxen.uberutilities;
 import com.daboxen.uberutilities.additions.machines.MachineRegistrar;
 import com.daboxen.uberutilities.additions.materials.Ubermaterials;
 import com.daboxen.uberutilities.additions.items.circuits.CircuitHandler;
+import com.daboxen.uberutilities.api.RecipeTypes;
 import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialEvent;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialRegistryEvent;
@@ -89,7 +90,7 @@ public class Uberutilities {
 
 	@SubscribeEvent
 	public void registerRecipeTypes(GTCEuAPI.RegisterEvent<ResourceLocation, GTRecipeType> event) {
-		//CustomRecipeTypes.init();
+		RecipeTypes.init();
 	}
 
 	@SubscribeEvent
