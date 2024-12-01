@@ -18,6 +18,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.javafmlmod.FMLModContainer;
 import net.minecraftforge.registries.RegisterEvent;
 
 import org.apache.logging.log4j.LogManager;
@@ -29,8 +30,7 @@ public class Uberutilities {
 	public static final Logger LOGGER = LogManager.getLogger();
 	public static GTRegistrate ÜBER_REGISTRATE = GTRegistrate.create(Uberutilities.MOD_ID);
 
-	public Uberutilities() {
-		IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+	public Uberutilities(IEventBus modEventBus) {
 
 		modEventBus.register(this);
 		modEventBus.addGenericListener(GTRecipeType.class, this::registerRecipeTypes);
