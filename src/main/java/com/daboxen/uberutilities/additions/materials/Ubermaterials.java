@@ -27,22 +27,22 @@ public class Ubermaterials {
 		IconSets.init();
 
 		UpQuark = new Material.Builder(Uberutilities.id("up_quark"))
-			.gas(1)
+			.gas(0)
 			.color(0xff0000)
 			.buildAndRegister()
 			.setFormula("u");
 		AntiUpQuark = new Material.Builder(Uberutilities.id("anti_up_quark"))
-			.gas(new FluidBuilder().attribute(ExtendedFluidAttributes.ANTIMATTER).temperature(1))
+			.gas(new FluidBuilder().attribute(ExtendedFluidAttributes.ANTIMATTER).temperature(0))
 			.color(0xff0000)
 			.buildAndRegister()
 			.setFormula("!u");
 		DownQuark = new Material.Builder(Uberutilities.id("down_quark"))
-			.gas(1)
+			.gas(0)
 			.color(0x0000ff)
 			.buildAndRegister()
 			.setFormula("d");
 		AntiDownQuark = new Material.Builder(Uberutilities.id("anti_down_quark"))
-		.gas(new FluidBuilder().attribute(ExtendedFluidAttributes.ANTIMATTER).temperature(1))
+		.gas(new FluidBuilder().attribute(ExtendedFluidAttributes.ANTIMATTER).temperature(0))
 			.color(0x0000ff)
 			.buildAndRegister()
 			.setFormula("!d");
@@ -59,7 +59,7 @@ public class Ubermaterials {
 			.element(Uberelements.Amogusium)
 			.color(0xff0000)
 			.secondaryColor(0x7fbfff)
-			.iconSet(IconSets.DULL) //todo: made a sus one
+			//.iconSet(IconSets.DULL) //todo: made a sus one
 			.ingot().liquid(500).plasma(1000000)
 			.buildAndRegister();
 	}
