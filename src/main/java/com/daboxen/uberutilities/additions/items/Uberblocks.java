@@ -8,6 +8,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
 
+import static com.daboxen.uberutilities.Uberutilities.LOGGER;
 import static com.daboxen.uberutilities.Uberutilities.UBER_REGISTRATE;
 
 public class Uberblocks {
@@ -19,5 +20,9 @@ public class Uberblocks {
 			.item(BlockItem::new)
 			.build()
 			.register();
+	}
+	
+	public static void init() {
+		LOGGER.info("Registering custom blocks");
 	}
 }

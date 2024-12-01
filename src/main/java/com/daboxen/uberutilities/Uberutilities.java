@@ -1,5 +1,6 @@
 package com.daboxen.uberutilities;
 
+import com.daboxen.uberutilities.additions.items.Uberblocks;
 import com.daboxen.uberutilities.additions.machines.MachineRegistrar;
 import com.daboxen.uberutilities.additions.materials.Ubermaterials;
 import com.daboxen.uberutilities.additions.items.circuits.CircuitHandler;
@@ -48,6 +49,7 @@ public class Uberutilities {
 
 	@SubscribeEvent
 	public void register(RegisterEvent event) {
+		Uberblocks.init();
 		CircuitHandler.registerItems();
 	}
 
