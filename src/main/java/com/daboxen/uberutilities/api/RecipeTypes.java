@@ -1,5 +1,6 @@
 package com.daboxen.uberutilities.api;
 
+import static com.daboxen.uberutilities.Uberutilities.LOGGER;
 import com.gregtechceu.gtceu.api.gui.GuiTextures;
 import com.gregtechceu.gtceu.api.recipe.GTRecipeType;
 import com.gregtechceu.gtceu.common.data.GTRecipeTypes;
@@ -11,6 +12,6 @@ public class RecipeTypes {
 		.setProgressBar(GuiTextures.ATOMIC_OVERLAY_1, ProgressTexture.FillDirection.LEFT_TO_RIGHT);
 	
 	public static void init() {
-		//h
+		LOGGER.info("Registering recipe types");
 	}
 }
