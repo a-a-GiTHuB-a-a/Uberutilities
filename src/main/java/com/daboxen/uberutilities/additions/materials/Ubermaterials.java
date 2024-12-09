@@ -22,7 +22,8 @@ public class Ubermaterials {
 
 	public static Material Amogusium;
 
-	//public static final PropertyKey<ExtendedFluidPipeProperties> EXTENDED_FLUID_PIPE = new PropertyKey<>("extended_fluid_pipe", ExtendedFluidPipeProperties.class);
+	public static final PropertyKey<ExtendedFluidPipeProperties> EXTENDED_FLUID_PIPE = new PropertyKey<>("extended_fluid_pipe", ExtendedFluidPipeProperties.class);
+	
 	public static void init() {
 		IconSets.init();
 
@@ -69,10 +70,11 @@ public class Ubermaterials {
         GTMaterials.Neutronium.addFlags(MaterialFlags.GENERATE_LONG_ROD, MaterialFlags.GENERATE_ROUND);
 
 		//TODO: uncomment once my PR is merged
-		/*for (MaterialRegistry registry : GTCEuAPI.materialManager.getRegistries()) {
+		for (MaterialRegistry registry : GTCEuAPI.materialManager.getRegistries()) {
 			for (Material material : registry.getAllMaterials()) {
 				if (material.hasProperty(PropertyKey.FLUID_PIPE)) {
 					FluidPipeProperties oldProp = material.getProperty(PropertyKey.FLUID_PIPE);
+					material.getProperties().removeProperty(PropertyKey.FLUID_PIPE);
 					ExtendedFluidPipeProperties newProp = new ExtendedFluidPipeProperties(
 						oldProp.getMaxFluidTemperature(),
 						oldProp.getThroughput(),
@@ -87,7 +89,7 @@ public class Ubermaterials {
 				}
 			}
 		}
-
-		GTMaterials.NaquadahAlloy.getProperty(EXTENDED_FLUID_PIPE).setAntimatterProof(true);*/
+		
+		GTMaterials.NaquadahAlloy.getProperty(PropertyKey.EXTENDED_FLUID_PIPE).setAntimatterProof(true);
 	}
 }
