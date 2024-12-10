@@ -119,6 +119,13 @@ repositories {
     // flatDir {
     //     dir 'libs'
     // }
+    maven {
+        name = "GTCEu Maven"
+        url = "https://maven.gtceu.com"
+        content {
+            includeGroup "com.gregtechceu.gtceu"
+        }
+    }
 }
 
 dependencies {
