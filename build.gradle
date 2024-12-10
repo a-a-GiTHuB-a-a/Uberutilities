@@ -1,7 +1,7 @@
 plugins {
-    id 'eclipse'
-    id 'idea'
-    id 'maven-publish' id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+    //id "eclipse"
+    id "idea"
+    id "maven-publish" id "net.minecraftforge.gradle" version "[6.0,6.2)"
 }
 
 version = mod_version
