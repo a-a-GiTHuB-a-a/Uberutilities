@@ -2,16 +2,12 @@ package com.daboxen.uberutilities.additions.materials;
 
 import com.daboxen.uberutilities.Uberutilities;
 import com.daboxen.uberutilities.api.ExtendedFluidAttributes;
-import com.daboxen.uberutilities.api.ExtendedFluidPipeProperties;
 import com.daboxen.uberutilities.api.IconSets;
-import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;
 import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlags;
-import com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidPipeProperties;
 import com.gregtechceu.gtceu.api.data.chemical.material.properties.PropertyKey;
 import com.gregtechceu.gtceu.api.data.chemical.material.properties.WireProperties;
-import com.gregtechceu.gtceu.api.data.chemical.material.registry.MaterialRegistry;
 import com.gregtechceu.gtceu.api.fluids.FluidBuilder;
 import com.gregtechceu.gtceu.common.data.GTMaterials;
 
@@ -24,8 +20,6 @@ public class Ubermaterials {
 	public static Material AntiNeutronium;
 
 	public static Material Amogusium;
-
-	public static final PropertyKey<ExtendedFluidPipeProperties> EXTENDED_FLUID_PIPE = new PropertyKey<>("extended_fluid_pipe", ExtendedFluidPipeProperties.class);
 	
 	public static void init() {
 		IconSets.init();
@@ -71,27 +65,6 @@ public class Ubermaterials {
 	public static void modifyMaterials() {
 		GTMaterials.Duranium.setProperty(PropertyKey.WIRE, new WireProperties((int)GTValues.V[GTValues.UHV], 4, 96));
         GTMaterials.Neutronium.addFlags(MaterialFlags.GENERATE_LONG_ROD, MaterialFlags.GENERATE_ROUND);
-
-		for (MaterialRegistry registry : GTCEuAPI.materialManager.getRegistries()) {
-			for (Material material : registry.getAllMaterials()) {
-				if (material.hasProperty(PropertyKey.FLUID_PIPE)) {
-					FluidPipeProperties oldProp = material.getProperty(PropertyKey.FLUID_PIPE);
-					material.getProperties().removeProperty(PropertyKey.FLUID_PIPE);
-					ExtendedFluidPipeProperties newProp = new ExtendedFluidPipeProperties(
-						oldProp.getMaxFluidTemperature(),
-						oldProp.getThroughput(),
-						oldProp.isGasProof(),
-						oldProp.isAcidProof(),
-						oldProp.isCryoProof(),
-						oldProp.isPlasmaProof(),
-						false,
-						oldProp.getChannels()
-					);
-					material.setProperty(EXTENDED_FLUID_PIPE, newProp);
-				}
-			}
-		}
-		
-		//GTMaterials.NaquadahAlloy.getProperty(EXTENDED_FLUID_PIPE).setAntimatterProof(true);
+		GTMaterials.NaquadahAlloy.getProperty(PropertyKey.FLUID_PIPE).setCanContain(ExtendedFluidAttributes.ANTIMATTER, true);
 	}
 }
