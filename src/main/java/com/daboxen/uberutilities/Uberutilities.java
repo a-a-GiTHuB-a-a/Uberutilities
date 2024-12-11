@@ -32,7 +32,6 @@ public class Uberutilities {
 	public static GTRegistrate UBER_REGISTRATE = GTRegistrate.create(Uberutilities.MOD_ID);
 
 	public Uberutilities(IEventBus modEventBus) {
-
 		modEventBus.register(this);
 		modEventBus.addGenericListener(GTRecipeType.class, this::registerRecipeTypes);
 		modEventBus.addGenericListener(MachineDefinition.class, this::registerMachines);
@@ -97,6 +96,6 @@ public class Uberutilities {
 
 	@SubscribeEvent
 	public void registerMachines(GTCEuAPI.RegisterEvent<ResourceLocation, MachineDefinition> event) {
-		MachineRegistrar.init();
+		//MachineRegistrar.init();
 	}
 }
