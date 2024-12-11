@@ -153,7 +153,7 @@ dependencies {
 	
 	implementation fg.deobf("com.gregtechceu.gtceu:gtceu-$project.minecraft_version:${gtceu_version}") {transitive = false}
 	implementation fg.deobf("com.tterrag.registrate:Registrate:${registrate_version}")
-	implementation fg.deobf("com.lowdragmc.ldlib:ldlib-forge-${minecraft_version}:${ldlib_version}") { transitive = false }
+	implementation fg.deobf("com.lowdragmc.ldlib:ldlib-forge-${minecraft_version}:${ldlib_version}") {transitive = false}
 	
 	// For more info:
 	// http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
