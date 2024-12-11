@@ -1,6 +1,8 @@
 package com.daboxen.uberutilities.additions.materials;
 
 import com.daboxen.uberutilities.Uberutilities;
+import com.daboxen.uberutilities.api.ExtendedFluidAttributes;
+import com.daboxen.uberutilities.api.ExtendedFluidPipeProperties;
 import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;

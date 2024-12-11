@@ -1,4 +1,4 @@
-package com.daboxen.uberutilities.additions.materials;
+package com.daboxen.uberutilities.api;
 
 import com.daboxen.uberutilities.Uberutilities;
 import com.gregtechceu.gtceu.api.fluids.attribute.FluidAttribute;
