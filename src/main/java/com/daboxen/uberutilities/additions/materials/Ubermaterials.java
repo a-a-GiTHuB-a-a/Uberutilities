@@ -71,7 +71,6 @@ public class Ubermaterials {
 		GTMaterials.Duranium.setProperty(PropertyKey.WIRE, new WireProperties((int)GTValues.V[GTValues.UHV], 4, 96));
         GTMaterials.Neutronium.addFlags(MaterialFlags.GENERATE_LONG_ROD, MaterialFlags.GENERATE_ROUND);
 
-		//TODO: uncomment once my PR is merged
 		for (MaterialRegistry registry : GTCEuAPI.materialManager.getRegistries()) {
 			for (Material material : registry.getAllMaterials()) {
 				if (material.hasProperty(PropertyKey.FLUID_PIPE)) {
