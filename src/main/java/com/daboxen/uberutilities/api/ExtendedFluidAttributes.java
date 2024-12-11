@@ -9,6 +9,6 @@ public final class ExtendedFluidAttributes {
 	 * Attribute for antimatter.
 	 */
 	public static final FluidAttribute ANTIMATTER = new FluidAttribute(Uberutilities.id("antimatter"),
-		list -> list.accept(Component.translatable("uberutilities.fluid.type_antimatter.tooltip")),
-		list -> list.accept(Component.translatable("uberutilities.fluid_pipe.antimatter_proof")));
+		list -> list.accept(Component.translatable("fluid.uberutilities.type_antimatter.tooltip")),
+		list -> list.accept(Component.translatable("fluid_pipe.uberutilities.antimatter_proof")));
 }
