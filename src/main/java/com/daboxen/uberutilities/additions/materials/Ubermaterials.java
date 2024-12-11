@@ -63,7 +63,7 @@ public class Ubermaterials {
 			.color(0xff0000)
 			.secondaryColor(0x7fbfff)
 			.iconSet(IconSets.SUS)
-			.ingot().liquid(500).plasma(1000000)
+			.ingot().liquid(12000).plasma(1000000)
 			.buildAndRegister();
 	}
 
