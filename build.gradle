@@ -151,7 +151,7 @@ dependencies {
 	// The group id is ignored when searching -- in this case, it is "blank"
 	// implementation fg.deobf("blank:coolmod-${mc_version}:${coolmod_version}")
 	
-	implementation fg.deobf("com.gregtechceu.gtceu:gtceu-$project.minecraft_version:${gtceu_version}") {transitive = false}
+	implementation fg.deobf("com.gregtechceu.gtceu:gtceu-${minecraft_version}:${gtceu_version}") {transitive = false}
 	implementation fg.deobf("com.tterrag.registrate:Registrate:${registrate_version}")
 	implementation fg.deobf("com.lowdragmc.ldlib:ldlib-forge-${minecraft_version}:${ldlib_version}") {transitive = false}
 	
