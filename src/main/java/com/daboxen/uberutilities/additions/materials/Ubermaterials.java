@@ -92,6 +92,6 @@ public class Ubermaterials {
 			}
 		}
 		
-		GTMaterials.NaquadahAlloy.getProperty(EXTENDED_FLUID_PIPE).setAntimatterProof(true);
+		//GTMaterials.NaquadahAlloy.getProperty(EXTENDED_FLUID_PIPE).setAntimatterProof(true);
 	}
 }
