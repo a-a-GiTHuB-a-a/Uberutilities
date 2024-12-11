@@ -12,8 +12,7 @@ import com.lowdragmc.lowdraglib.gui.texture.ProgressTexture;
 
 public class RecipeTypes {
 	public static final GTRecipeType FIELD_EXCITER = GTRecipeTypes.register("field_exciter", GTRecipeTypes.MULTIBLOCK)
-		.setMaxSize(IO.IN, ItemRecipeCapability.CAP, 1)
-		.setMaxSize(IO.OUT, FluidRecipeCapability.CAP, 2)
+		.setMaxIOSize(1, 0, 0, 2)
 		.setProgressBar(GuiTextures.PROGRESS_BAR_FUSION, ProgressTexture.FillDirection.LEFT_TO_RIGHT);
 	
 	public static void init() {
