@@ -122,7 +122,14 @@ repositories {
 			includeGroup "com.gregtechceu.gtceu"
 		}
 	}
-	maven {url = "https://maven.tterrag.com/"}
+	maven {
+		name = "Registrate Maven"
+		url = "https://maven.tterrag.com/"
+	}
+	maven {
+		name = "LDLib Maven"
+		url = "https://maven.firstdarkdev.xyz/snapshots"
+	}
 }
 
 dependencies {
@@ -146,6 +153,7 @@ dependencies {
 	
 	implementation fg.deobf("com.gregtechceu.gtceu:gtceu-$project.minecraft_version:1.5.5-SNAPSHOT") {transitive = false}
 	implementation fg.deobf("com.tterrag.registrate:Registrate:${registrate_version}")
+	implementation fg.deobf("com.lowdragmc.ldlib:ldlib-forge-${minecraft_version}:${ldlib_version}") { transitive = false }
 	
 	// For more info:
 	// http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
