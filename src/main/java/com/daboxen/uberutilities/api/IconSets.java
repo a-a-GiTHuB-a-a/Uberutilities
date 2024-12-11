@@ -1,4 +1,4 @@
-package com.daboxen.uberutilities.additions.materials;
+package com.daboxen.uberutilities.api;
 
 import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconSet;
 
