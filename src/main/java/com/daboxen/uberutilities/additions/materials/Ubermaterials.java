@@ -6,6 +6,7 @@ import com.daboxen.uberutilities.api.IconSets;
 import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;
 import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlags;
+import com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidPipeProperties;
 import com.gregtechceu.gtceu.api.data.chemical.material.properties.PropertyKey;
 import com.gregtechceu.gtceu.api.data.chemical.material.properties.WireProperties;
 import com.gregtechceu.gtceu.api.fluids.FluidBuilder;
@@ -65,6 +66,9 @@ public class Ubermaterials {
 	public static void modifyMaterials() {
 		GTMaterials.Duranium.setProperty(PropertyKey.WIRE, new WireProperties((int)GTValues.V[GTValues.UHV], 4, 96));
         GTMaterials.Neutronium.addFlags(MaterialFlags.GENERATE_LONG_ROD, MaterialFlags.GENERATE_ROUND);
-		GTMaterials.NaquadahAlloy.getProperty(PropertyKey.FLUID_PIPE).setCanContain(ExtendedFluidAttributes.ANTIMATTER, true);
+		
+		FluidPipeProperties NaqAlloy_Pipe = GTMaterials.NaquadahAlloy.getProperty(PropertyKey.FLUID_PIPE);
+		NaqAlloy_Pipe.setCanContain(ExtendedFluidAttributes.ANTIMATTER, true);
+		GTMaterials.NaquadahAlloy.setProperty(PropertyKey.FLUID_PIPE, NaqAlloy_Pipe);
 	}
 }
