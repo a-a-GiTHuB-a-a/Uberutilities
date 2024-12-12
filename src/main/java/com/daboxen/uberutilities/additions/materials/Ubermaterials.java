@@ -67,8 +67,8 @@ public class Ubermaterials {
 		GTMaterials.Duranium.setProperty(PropertyKey.WIRE, new WireProperties((int)GTValues.V[GTValues.UHV], 4, 96));
         GTMaterials.Neutronium.addFlags(MaterialFlags.GENERATE_LONG_ROD, MaterialFlags.GENERATE_ROUND);
 		
-		FluidPipeProperties NaqAlloy_Pipe = GTMaterials.NaquadahAlloy.getProperty(PropertyKey.FLUID_PIPE);
-		NaqAlloy_Pipe.setCanContain(ExtendedFluidAttributes.ANTIMATTER, true);
-		GTMaterials.NaquadahAlloy.setProperty(PropertyKey.FLUID_PIPE, NaqAlloy_Pipe);
+		FluidPipeProperties Naq_Pipe = GTMaterials.Naquadah.getProperty(PropertyKey.FLUID_PIPE);
+		Naq_Pipe.setCanContain(ExtendedFluidAttributes.ANTIMATTER, true);
+		GTMaterials.Naquadah.setProperty(PropertyKey.FLUID_PIPE, Naq_Pipe);
 	}
 }
