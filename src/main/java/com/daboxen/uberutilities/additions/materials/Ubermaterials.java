@@ -7,10 +7,13 @@ import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;
 import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlags;
 import com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidPipeProperties;
+import com.gregtechceu.gtceu.api.data.chemical.material.properties.IMaterialProperty;
 import com.gregtechceu.gtceu.api.data.chemical.material.properties.PropertyKey;
 import com.gregtechceu.gtceu.api.data.chemical.material.properties.WireProperties;
 import com.gregtechceu.gtceu.api.fluids.FluidBuilder;
 import com.gregtechceu.gtceu.common.data.GTMaterials;
+
+import java.util.function.UnaryOperator;
 
 public class Ubermaterials {
 	public static Material UpQuark;
@@ -62,13 +65,21 @@ public class Ubermaterials {
 			.ingot().liquid(12000).plasma(1000000)
 			.buildAndRegister();
 	}
+	
+	public static <T extends IMaterialProperty> void modifyMaterialProperty(Material material, PropertyKey<T> key, UnaryOperator<T> modifier) {
+		T prop = material.getProperty(key);
+		material.getProperties().removeProperty(key);
+		prop = modifier.apply(prop);
+		material.setProperty(key, prop);
+	}
 
 	public static void modifyMaterials() {
 		GTMaterials.Duranium.setProperty(PropertyKey.WIRE, new WireProperties((int)GTValues.V[GTValues.UHV], 4, 96));
         GTMaterials.Neutronium.addFlags(MaterialFlags.GENERATE_LONG_ROD, MaterialFlags.GENERATE_ROUND);
 		
-		FluidPipeProperties Naq_Pipe = GTMaterials.Naquadah.getProperty(PropertyKey.FLUID_PIPE);
-		Naq_Pipe.setCanContain(ExtendedFluidAttributes.ANTIMATTER, true);
-		GTMaterials.Naquadah.setProperty(PropertyKey.FLUID_PIPE, Naq_Pipe);
+		modifyMaterialProperty(GTMaterials.Naquadah, PropertyKey.FLUID_PIPE, (pipe) -> {
+			pipe.setCanContain(ExtendedFluidAttributes.ANTIMATTER, true);
+			return pipe;
+		});
 	}
 }
