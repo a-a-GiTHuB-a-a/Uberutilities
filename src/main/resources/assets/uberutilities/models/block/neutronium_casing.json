@@ -1,0 +1,6 @@
+{
+  "parent": "models/cube_all",
+  "textures": {
+    "0": "uberutilities:block/neutronium_casing"
+  }
+}
