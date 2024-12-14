@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "0": "uberutilities:block/neutronium_casing"
+    "all": "uberutilities:block/neutronium_casing"
   }
 }
