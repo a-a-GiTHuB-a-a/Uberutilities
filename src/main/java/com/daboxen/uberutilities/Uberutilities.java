@@ -96,6 +96,6 @@ public class Uberutilities {
 
 	@SubscribeEvent
 	public void registerMachines(GTCEuAPI.RegisterEvent<ResourceLocation, MachineDefinition> event) {
-		//MachineRegistrar.init();
+		MachineRegistrar.init();
 	}
 }
