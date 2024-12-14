@@ -32,21 +32,25 @@ public class CircuitType {
 		Uberutilities.UBER_REGISTRATE.item(String.format("%s_processor", this.name.toLowerCase()), Item::new)
 			.lang(String.format("%s Processor", this.name))
 			.tag(getTag(tier))
+			.model((cxt, prov) -> prov.basicItem(Uberutilities.id(String.format("%s_processor", this.name.toLowerCase()))))
 			.build();
 
 		Uberutilities.UBER_REGISTRATE.item(String.format("%s_processor_assembly", this.name.toLowerCase()), Item::new)
 			.lang(String.format("%s Processor Assembly", this.name))	
 			.tag(getTag(tier+1))
+			.model((cxt, prov) -> prov.basicItem(Uberutilities.id(String.format("%s_processor_assembly", this.name.toLowerCase()))))
 			.build();
 
 		Uberutilities.UBER_REGISTRATE.item(String.format("%s_processor_computer", this.name.toLowerCase()), Item::new)
 			.lang(String.format("%s Processor Computer", this.name))	
 			.tag(getTag(tier+2))
+			.model((cxt, prov) -> prov.basicItem(Uberutilities.id(String.format("%s_processor_computer", this.name.toLowerCase()))))
 			.build();
 
 		Uberutilities.UBER_REGISTRATE.item(String.format("%s_processor_mainframe", this.name.toLowerCase()), Item::new)
 			.lang(String.format("%s Processor Mainframe", this.name))	
 			.tag(getTag(tier+3))
+			.model((cxt, prov) -> prov.basicItem(Uberutilities.id(String.format("%s_processor_mainframe", this.name.toLowerCase()))))
 			.build();
 	}
 
