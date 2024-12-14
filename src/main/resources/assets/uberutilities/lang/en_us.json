@@ -8,5 +8,6 @@
 	"fluid.uberutilities.type_antimatter.tooltip": "§khello§r§c§lANTIMATTER! HANDLE WITH EXTREME CAUTION!§r§kworld§r",
 	"uberutilities.fluid_pipe.antimatter_proof": "§khello§r§c§lCapable of containing antimatter§r§kworld§r",
 
-	"machine.uberutilities.field_exciter.tooltip.0": "Making matter out of pure energy"
+	"machine.uberutilities.field_exciter.tooltip.0": "Making matter out of pure energy",
+	"block.uberutilities.field_exciter": "Quantum Field Exciter"
 }
