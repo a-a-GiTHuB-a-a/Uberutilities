@@ -2,6 +2,7 @@ package com.daboxen.uberutilities.additions.items.circuits;
 
 import com.daboxen.uberutilities.Uberutilities;
 import com.gregtechceu.gtceu.api.GTValues;
+import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
@@ -15,6 +16,11 @@ public class CircuitType {
 	char color;
 	String name;
 	String[] descriptions;
+	
+	ItemEntry<Item> PROCESSOR;
+	ItemEntry<Item> ASSEMBLY;
+	ItemEntry<Item> COMPUTER;
+	ItemEntry<Item> MAINFRAME;
 
 	public CircuitType(int tier, char color, String name, String[] descriptions) {
 		this.tier = tier;
@@ -29,29 +35,29 @@ public class CircuitType {
 	}
 
 	public void registerItems() {
-		Uberutilities.UBER_REGISTRATE.item(String.format("%s_processor", this.name.toLowerCase()), Item::new)
+		PROCESSOR = Uberutilities.UBER_REGISTRATE.item(String.format("%s_processor", this.name.toLowerCase()), Item::new)
 			.lang(String.format("%s Processor", this.name))
 			.tag(getTag(tier))
 			.model((cxt, prov) -> prov.basicItem(Uberutilities.id(String.format("%s_processor", this.name.toLowerCase()))))
-			.build();
+			.register();
 
-		Uberutilities.UBER_REGISTRATE.item(String.format("%s_processor_assembly", this.name.toLowerCase()), Item::new)
+		ASSEMBLY = Uberutilities.UBER_REGISTRATE.item(String.format("%s_processor_assembly", this.name.toLowerCase()), Item::new)
 			.lang(String.format("%s Processor Assembly", this.name))	
 			.tag(getTag(tier+1))
 			.model((cxt, prov) -> prov.basicItem(Uberutilities.id(String.format("%s_processor_assembly", this.name.toLowerCase()))))
-			.build();
+			.register();
 
-		Uberutilities.UBER_REGISTRATE.item(String.format("%s_processor_computer", this.name.toLowerCase()), Item::new)
+		COMPUTER = Uberutilities.UBER_REGISTRATE.item(String.format("%s_processor_computer", this.name.toLowerCase()), Item::new)
 			.lang(String.format("%s Processor Computer", this.name))	
 			.tag(getTag(tier+2))
 			.model((cxt, prov) -> prov.basicItem(Uberutilities.id(String.format("%s_processor_computer", this.name.toLowerCase()))))
-			.build();
+			.register();
 
-		Uberutilities.UBER_REGISTRATE.item(String.format("%s_processor_mainframe", this.name.toLowerCase()), Item::new)
+		MAINFRAME = Uberutilities.UBER_REGISTRATE.item(String.format("%s_processor_mainframe", this.name.toLowerCase()), Item::new)
 			.lang(String.format("%s Processor Mainframe", this.name))	
 			.tag(getTag(tier+3))
 			.model((cxt, prov) -> prov.basicItem(Uberutilities.id(String.format("%s_processor_mainframe", this.name.toLowerCase()))))
-			.build();
+			.register();
 	}
 
 	public void gatherData(GatherDataEvent event) {
