@@ -20,7 +20,7 @@ public class QuantumFieldExciter {
 	public static final MultiblockMachineDefinition FIELD_EXCITER = UBER_REGISTRATE.multiblock("field_exciter", WorkableElectricMultiblockMachine::new)
 		.rotationState(RotationState.ALL)
 		.recipeType(RecipeTypes.FIELD_EXCITER)
-		.recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(new OverclockingLogic(1/3.6, OverclockingLogic.STD_VOLTAGE_FACTOR, true)))
+		.recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.create(1/3.6, OverclockingLogic.STD_VOLTAGE_FACTOR, true)))
 		.appearanceBlock(Uberblocks.NEUTRONIUM_MACHINE_CASING)
 		.pattern(definition -> FactoryBlockPattern.start()
 			.aisle("CCC")
