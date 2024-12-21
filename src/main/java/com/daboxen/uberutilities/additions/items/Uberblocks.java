@@ -28,9 +28,9 @@ public class Uberblocks {
 			.initialProperties(() -> Blocks.IRON_BLOCK)
 			.properties(p -> p.isValidSpawn((state, level, pos, ent) -> false))
 			.properties(p -> (tier >= 3 ? p.explosionResistance(-1) : p))
-			.tag(GTToolType.WRENCH.harvestTags.get(0), BlockTags.MINEABLE_WITH_PICKAXE)
 			.addLayer(() -> RenderType::cutoutMipped)
 			.blockstate(GTModels.cubeAllModel(name, texture))
+			.tag(GTToolType.WRENCH.harvestTags.get(0), BlockTags.MINEABLE_WITH_PICKAXE)
 			.item(BlockItem::new)
 			.build()
 			.register();
