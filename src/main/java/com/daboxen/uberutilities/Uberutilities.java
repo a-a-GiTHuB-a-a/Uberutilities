@@ -50,10 +50,10 @@ public class Uberutilities {
 		return new ResourceLocation(MOD_ID, path);
 	}
 
-	@SubscribeEvent
+	/*@SubscribeEvent
 	public void gatherData(GatherDataEvent event) {
 		CircuitHandler.gatherData(event);
-	}
+	}*/
 
 	@SubscribeEvent
 	public void commonSetup(final FMLCommonSetupEvent event) {
