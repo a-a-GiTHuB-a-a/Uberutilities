@@ -40,17 +40,14 @@ public class Uberutilities {
 		// If we want to use annotations to register event listeners,
 		// we need to register our object like this!
 		MinecraftForge.EVENT_BUS.register(this);
+		
+		Uberblocks.init();
+		CircuitHandler.registerItems();
+		UBER_REGISTRATE.registerRegistrate();
 	}
 
 	public static ResourceLocation id(String path) { //yoinked this from GCyR
 		return new ResourceLocation(MOD_ID, path);
-	}
-
-	@SubscribeEvent
-	public void register(RegisterEvent event) {
-		Uberblocks.init();
-		CircuitHandler.registerItems();
-		UBER_REGISTRATE.registerRegistrate();
 	}
 
 	@SubscribeEvent
