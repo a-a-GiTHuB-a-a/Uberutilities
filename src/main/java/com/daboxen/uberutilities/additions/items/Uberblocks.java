@@ -4,6 +4,7 @@ import com.daboxen.uberutilities.Uberutilities;
 import com.gregtechceu.gtceu.api.item.tool.GTToolType;
 import com.gregtechceu.gtceu.common.data.GTModels;
 import com.tterrag.registrate.util.entry.BlockEntry;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.BlockItem;
@@ -28,6 +29,7 @@ public class Uberblocks {
 			.properties(p -> p.isValidSpawn((state, level, pos, ent) -> false))
 			.properties(p -> (tier >= 3 ? p.explosionResistance(-1) : p))
 			.tag(GTToolType.WRENCH.harvestTags.get(0), BlockTags.MINEABLE_WITH_PICKAXE)
+			.addLayer(() -> RenderType::cutoutMipped)
 			.blockstate(GTModels.cubeAllModel(name, texture))
 			.item(BlockItem::new)
 			.build()
