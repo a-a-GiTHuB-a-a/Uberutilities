@@ -50,6 +50,7 @@ public class Uberutilities {
 	public void register(RegisterEvent event) {
 		Uberblocks.init();
 		CircuitHandler.registerItems();
+		UBER_REGISTRATE.registerRegistrate();
 	}
 
 	@SubscribeEvent
