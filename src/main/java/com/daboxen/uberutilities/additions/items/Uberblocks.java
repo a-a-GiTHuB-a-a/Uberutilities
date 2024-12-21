@@ -17,7 +17,7 @@ import static com.daboxen.uberutilities.Uberutilities.LOGGER;
 import static com.daboxen.uberutilities.Uberutilities.UBER_REGISTRATE;
 
 public class Uberblocks {
-	public static BlockEntry<Block> NEUTRONIUM_MACHINE_CASING = createCasing("neutronium_casing", Uberutilities.id("block/neutronium_casing"));
+	public static BlockEntry<Block> NEUTRONIUM_MACHINE_CASING = createCasing("neutronium_casing", Uberutilities.id("block/neutronium_casing.png"));
 	
 	public static @Nonnull BlockEntry<Block> createCasing(@Nonnull String name, @Nonnull ResourceLocation texture) {
 		return createCasing(name, texture, 2);
