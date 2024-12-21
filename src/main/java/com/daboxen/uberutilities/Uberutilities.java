@@ -32,6 +32,10 @@ public class Uberutilities {
 	public static GTRegistrate UBER_REGISTRATE = GTRegistrate.create(Uberutilities.MOD_ID);
 
 	public Uberutilities(IEventBus modEventBus) {
+		Uberblocks.init();
+		CircuitHandler.registerItems();
+		UBER_REGISTRATE.registerRegistrate();
+		
 		modEventBus.register(this);
 		modEventBus.addGenericListener(GTRecipeType.class, this::registerRecipeTypes);
 		modEventBus.addGenericListener(MachineDefinition.class, this::registerMachines);
@@ -40,10 +44,6 @@ public class Uberutilities {
 		// If we want to use annotations to register event listeners,
 		// we need to register our object like this!
 		MinecraftForge.EVENT_BUS.register(this);
-		
-		Uberblocks.init();
-		CircuitHandler.registerItems();
-		UBER_REGISTRATE.registerRegistrate();
 	}
 
 	public static ResourceLocation id(String path) { //yoinked this from GCyR
