@@ -168,8 +168,6 @@ tasks.named("processResources", ProcessResources).configure {
 		minecraft_version_range: minecraft_version_range,
 		
 		gtceu_version: gtceu_version,
-		ldlib_version: ldlib_version,
-		registrate_version: registrate_version,
 		forge_version: forge_version,
 		forge_version_range: forge_version_range,
 		loader_version_range: loader_version_range,
