@@ -151,7 +151,9 @@ dependencies {
 	// The group id is ignored when searching -- in this case, it is "blank"
 	// implementation fg.deobf("blank:coolmod-${mc_version}:${coolmod_version}")
 	
-	implementation fg.deobf("com.gregtechceu.gtceu:gtceu-${minecraft_version}:${gtceu_version}")
+	implementation fg.deobf("com.gregtechceu.gtceu:gtceu-${minecraft_version}:${gtceu_version}") {transitive = false}
+	implementation fg.deobf("com.tterrag.registrate:Registrate:${registrate_version}") {transitive = false}
+	implementation fg.deobf("com.lowdragmc.ldlib:ldlib-forge-${minecraft_version}:${ldlib_version}") {transitive = false}
 	
 	// For more info:
 	// http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
@@ -168,6 +170,8 @@ tasks.named("processResources", ProcessResources).configure {
 		minecraft_version_range: minecraft_version_range,
 		
 		gtceu_version: gtceu_version,
+		ldlib_version: ldlib_version,
+		registrate_version: registrate_version,
 		forge_version: forge_version,
 		forge_version_range: forge_version_range,
 		loader_version_range: loader_version_range,
