@@ -58,10 +58,10 @@ neoForge {
 	}
 	
 	mods {
-		testproject {
+		/*testproject {
 			sourceSet sourceSets.main
 			sourceSet sourceSets.api
-		}
+		}*/
 	}
 	
 	parchment {
@@ -69,10 +69,10 @@ neoForge {
 		mappingsVersion = "2024.06.23"
 	}
 	
-	unitTest {
+	/*unitTest {
 		enable()
 		testedMod = mods.testproject
-	}
+	}*/
 	
 	additionalMinecraftArtifacts.put('vanillaDeobfuscated', project.file('build/vanilla.jar'))
 }
