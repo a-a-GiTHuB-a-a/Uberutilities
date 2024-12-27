@@ -129,6 +129,8 @@ dependencies {
 	modImplementation("com.tterrag.registrate:Registrate:${registrate_version}") {transitive = false}
 	modImplementation("com.lowdragmc.ldlib:ldlib-forge-${minecraft_version}:${ldlib_version}") {transitive = false}
 	
+	modRuntimeOnly("dev.emi:emi-forge:${emi_version}+${minecraft_version}")
+	
 	// For more info:
 	// http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
 	// http://www.gradle.org/docs/current/userguide/dependency_management.html
@@ -150,6 +152,7 @@ tasks.named("processResources", ProcessResources).configure {
 		gtceu_version: gtceu_version,
 		ldlib_version: ldlib_version,
 		registrate_version: registrate_version,
+		emi_version: emi_version,
 		forge_version: forge_version,
 		forge_version_range: forge_version_range,
 		loader_version_range: loader_version_range,
