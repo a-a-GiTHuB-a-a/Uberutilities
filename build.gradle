@@ -104,6 +104,10 @@ repositories {
 		name = "LDLib Maven"
 		url = "https://maven.firstdarkdev.xyz/snapshots"
 	}
+	maven {
+		name = "TerraformersMC"
+		url = "https://maven.terraformersmc.com/"
+	}
 }
 
 dependencies {
