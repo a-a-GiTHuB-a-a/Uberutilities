@@ -17,7 +17,7 @@ import static com.daboxen.uberutilities.Uberutilities.LOGGER;
 import static com.daboxen.uberutilities.Uberutilities.UBER_REGISTRATE;
 
 public class Uberblocks {
-	public static BlockEntry<Block> NEUTRONIUM_MACHINE_CASING = createCasing("neutronium_casing", Uberutilities.id("block/neutronium_casing.png"));
+	public static BlockEntry<Block> NEUTRONIUM_MACHINE_CASING = createCasing("neutronium_casing", Uberutilities.id("block/neutronium_casing"));
 	
 	public static @Nonnull BlockEntry<Block> createCasing(@Nonnull String name, @Nonnull ResourceLocation texture) {
 		return createCasing(name, texture, 2);
@@ -30,7 +30,7 @@ public class Uberblocks {
 			.properties(p -> (tier >= 3 ? p.explosionResistance(-1) : p))
 			.addLayer(() -> RenderType::cutoutMipped)
 			.blockstate(GTModels.cubeAllModel(name, texture))
-			.tag(TagUtil.createBlockTag("mineable/wrench", false), BlockTags.MINEABLE_WITH_PICKAXE)
+			.tag(TagUtil.createBlockTag("mineable/wrench", false))
 			.item(BlockItem::new)
 			.build()
 			.register();
