@@ -6,7 +6,6 @@ import com.gregtechceu.gtceu.common.data.GTModels;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
