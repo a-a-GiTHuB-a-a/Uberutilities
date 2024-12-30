@@ -9,10 +9,6 @@ pluginManagement {
             name = "MinecraftForge"
             url = "https://maven.mineraftforge.net/"
         }
-        maven {
-            name = "Modrinth"
-            url = "https://api.modrinth.com/maven"
-        }
     }
 }
 
