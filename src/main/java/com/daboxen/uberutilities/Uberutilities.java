@@ -30,6 +30,8 @@ public class Uberutilities {
 	public static GTRegistrate UBER_REGISTRATE = GTRegistrate.create(Uberutilities.MOD_ID);
 
 	public Uberutilities(IEventBus modEventBus) {
+		LOGGER.info("Starting mod");
+		
 		Uberblocks.init();
 		CircuitHandler.registerItems();
 		UBER_REGISTRATE.registerRegistrate();
