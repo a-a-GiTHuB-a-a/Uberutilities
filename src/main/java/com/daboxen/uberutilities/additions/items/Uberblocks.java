@@ -18,10 +18,6 @@ import static com.daboxen.uberutilities.Uberutilities.UBER_REGISTRATE;
 public class Uberblocks {
 	public static BlockEntry<Block> NEUTRONIUM_MACHINE_CASING = createCasing("neutronium_casing", Uberutilities.id("block/neutronium_casing"), 5);
 	
-	public static @Nonnull BlockEntry<Block> createCasing(@Nonnull String name, @Nonnull ResourceLocation texture) {
-		return createCasing(name, texture, 2);
-	}
-	
 	public static @Nonnull BlockEntry<Block> createCasing(@Nonnull String name, @Nonnull ResourceLocation texture, int tier) {
 		return UBER_REGISTRATE.block(name, Block::new)
 			.initialProperties(() -> Blocks.IRON_BLOCK)
