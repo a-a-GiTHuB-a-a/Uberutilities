@@ -6,7 +6,6 @@ import com.gregtechceu.gtceu.common.data.GTModels;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 
@@ -26,7 +25,7 @@ public class Uberblocks {
 			.addLayer(() -> RenderType::cutoutMipped)
 			.blockstate(GTModels.cubeAllModel(name, texture))
 			.tag(TagUtil.createBlockTag("mineable/wrench", false))
-			.item(BlockItem::new)
+			.item()
 			.build()
 			.register();
 	}
