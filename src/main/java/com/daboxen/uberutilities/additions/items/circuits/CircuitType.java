@@ -15,18 +15,16 @@ public class CircuitType {
 	int tier;
 	char color;
 	String name;
-	String[] descriptions;
 	
 	ItemEntry<Item> PROCESSOR;
 	ItemEntry<Item> ASSEMBLY;
 	ItemEntry<Item> COMPUTER;
 	ItemEntry<Item> MAINFRAME;
 
-	public CircuitType(int tier, char color, String name, String[] descriptions) {
+	public CircuitType(int tier, char color, String name) {
 		this.tier = tier;
 		this.color = color;
 		this.name = name;
-		this.descriptions = descriptions;
 	}
 
 	private TagKey<Item> getTag(int tier) {
@@ -58,16 +56,5 @@ public class CircuitType {
 			.tag(getTag(tier+3))
 			.defaultModel()
 			.register();
-	}
-
-	public void gatherData(GatherDataEvent event) {
-		DataGenerator generator = event.getGenerator();
-		
-		generator.addProvider(
-			// Tell generator to run only when client assets are generating
-			event.includeClient(),
-			// Localizations for American English
-			new CircuitLanguageProvider(generator.getPackOutput(), Uberutilities.MOD_ID, "en_us", this)
-		);
 	}
 }
