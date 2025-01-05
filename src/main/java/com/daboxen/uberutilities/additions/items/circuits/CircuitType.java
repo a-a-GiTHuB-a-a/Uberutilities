@@ -3,11 +3,9 @@ package com.daboxen.uberutilities.additions.items.circuits;
 import com.daboxen.uberutilities.Uberutilities;
 import com.gregtechceu.gtceu.api.GTValues;
 import com.tterrag.registrate.util.entry.ItemEntry;
-import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
-import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.tags.ITagManager;
 
