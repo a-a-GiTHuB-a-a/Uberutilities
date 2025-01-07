@@ -30,6 +30,7 @@ neoForge {
 		}
 		client {
 			client()
+			sourceSet = sourceSets.main
 		}
 		client2 {
 			client()
