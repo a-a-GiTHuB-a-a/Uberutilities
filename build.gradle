@@ -71,10 +71,10 @@ neoForge {
 	}
 	
 	mods {
-		/*testproject {
+		uberutilities {
 			sourceSet sourceSets.main
-			sourceSet sourceSets.api
-		}*/
+			//sourceSet sourceSets.api
+		}
 	}
 	
 	parchment {
