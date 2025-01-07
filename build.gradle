@@ -70,12 +70,12 @@ neoForge {
 		}
 	}
 	
-	mods {
+	/*mods {
 		uberutilities {
 			sourceSet sourceSets.main
-			//sourceSet sourceSets.api
+			sourceSet sourceSets.api
 		}
-	}
+	}*/
 	
 	parchment {
 		minecraftVersion = "1.20.1"
