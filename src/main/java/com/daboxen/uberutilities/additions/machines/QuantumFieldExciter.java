@@ -31,7 +31,7 @@ public class QuantumFieldExciter {
 			).build()
 		)
 		.renderer(() -> new WorkableCasingMachineRenderer(Uberutilities.id("block/neutronium_casing"), GTCEu.id("block/multiblock/fusion_reactor")))
-		.tooltips(Component.translatable("machine.uberutilities.field_exciter.tooltip.0"))
+		//.tooltips(Component.translatable("machine.uberutilities.field_exciter.tooltip.0"))
 		.register();
 	
 	public static void init() {
