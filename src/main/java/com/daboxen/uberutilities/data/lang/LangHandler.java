@@ -13,6 +13,6 @@ public class LangHandler {
 		provider.add("uberutilities.fluid_pipe.antimatter_proof", "§khello§r§c§lCapable of containing antimatter§r§kworld§r");
 		
 		provider.add("machine.uberutilities.field_exciter.tooltip.0", "Making matter out of pure energy");
-		replace(provider, "block.uberutilities.field_exciter", "Quantum Field Exciter");
+		//replace(provider, "block.uberutilities.field_exciter", "Quantum Field Exciter");
 	}
 }
