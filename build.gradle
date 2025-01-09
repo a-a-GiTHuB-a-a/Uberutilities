@@ -7,7 +7,6 @@ plugins {
 
 sourceSets {
 	main.resources { srcDir "src/generated/resources" }
-	api
 }
 
 version = mod_version
@@ -26,7 +25,6 @@ println "Java: ${System.getProperty "java.version"}, JVM: ${System.getProperty "
 
 neoForge {
 	version = "${minecraft_version}-${forge_version}"
-	addModdingDependenciesTo(sourceSets.api)
 	
 	runs {
 		configureEach {
@@ -67,18 +65,13 @@ neoForge {
 		server {
 			server()
 		}
-		apitest {
-			client()
-			sourceSet = sourceSets.api
-		}
 	}
 	
-	/*mods {
-		uberutilities {
+	mods {
+		"${mod_id}" {
 			sourceSet sourceSets.main
-			sourceSet sourceSets.api
 		}
-	}*/
+	}
 	
 	parchment {
 		minecraftVersion = minecraft_version
@@ -132,8 +125,6 @@ dependencies {
 	//testImplementation "org.junit.jupiter:junit-jupiter"
 	//testRuntimeOnly "org.junit.platform:junit-platform-launcher"
 	//testImplementation "net.neoforged:testframework:${project.forge_version}"
-	
-	implementation sourceSets.api.output
 	
 	// Example mod dependency with JEI - using fg.deobf() ensures the dependency is remapped to your development mappings
 	// The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
