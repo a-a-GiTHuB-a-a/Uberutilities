@@ -5,6 +5,7 @@ import com.daboxen.uberutilities.additions.machines.MachineRegistrar;
 import com.daboxen.uberutilities.additions.materials.Ubermaterials;
 import com.daboxen.uberutilities.additions.items.circuits.CircuitHandler;
 import com.daboxen.uberutilities.api.RecipeTypes;
+import com.daboxen.uberutilities.data.Datagen;
 import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialEvent;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialRegistryEvent;
@@ -39,6 +40,7 @@ public class Uberutilities {
 		Uberblocks.init();
 		CircuitHandler.registerItems();
 		UBER_REGISTRATE.registerRegistrate();
+		Datagen.init();
 		
 		modEventBus.register(this);
 		modEventBus.addGenericListener(GTRecipeType.class, this::registerRecipeTypes);
