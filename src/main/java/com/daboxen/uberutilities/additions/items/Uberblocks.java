@@ -4,7 +4,7 @@ import com.daboxen.uberutilities.Uberutilities;
 import com.gregtechceu.gtceu.api.data.tag.TagUtil;
 import com.gregtechceu.gtceu.common.data.GTModels;
 import com.tterrag.registrate.util.entry.BlockEntry;
-//import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -29,7 +29,7 @@ public class Uberblocks {
 			.initialProperties(() -> Blocks.IRON_BLOCK)
 			.properties(p -> p.isValidSpawn((state, level, pos, ent) -> false))
 			.properties(p -> (tier >= 3 ? p.explosionResistance(-1) : p))
-			//.addLayer(() -> RenderType::cutoutMipped)
+			.addLayer(() -> RenderType::cutoutMipped)
 			.blockstate(GTModels.cubeAllModel(name, texture))
 			.tag(TagUtil.createBlockTag("mineable/wrench", false))
 			.item()
