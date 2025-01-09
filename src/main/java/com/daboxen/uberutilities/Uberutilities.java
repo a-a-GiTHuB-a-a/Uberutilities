@@ -19,7 +19,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -31,7 +31,9 @@ public class Uberutilities {
 	public static final Logger LOGGER = LogManager.getLogger();
 	public static GTRegistrate UBER_REGISTRATE = GTRegistrate.create(Uberutilities.MOD_ID);
 
-	public Uberutilities(IEventBus modEventBus) {
+	public Uberutilities() {
+		IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+		
 		LOGGER.info("Starting mod");
 		
 		Uberblocks.init();
@@ -48,7 +50,7 @@ public class Uberutilities {
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
-	public static @Nonnull ResourceLocation id(String path) { //yoinked this from GCyR
+	public static @Nonnull ResourceLocation id(@Nonnull String path) { //yoinked this from GCyR
 		return new ResourceLocation(MOD_ID, path);
 	}
 
