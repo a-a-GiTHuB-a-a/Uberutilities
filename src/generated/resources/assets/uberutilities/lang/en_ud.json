@@ -6,10 +6,13 @@
   "item.uberutilities.neutrino_processor_assembly": "ʎןqɯǝssⱯ ɹossǝɔoɹԀ ouıɹʇnǝN",
   "item.uberutilities.neutrino_processor_computer": "ɹǝʇndɯoƆ ɹossǝɔoɹԀ ouıɹʇnǝN",
   "item.uberutilities.neutrino_processor_mainframe": "ǝɯɐɹɟuıɐW ɹossǝɔoɹԀ ouıɹʇnǝN",
+  "machine.uberutilities.field_exciter.tooltip.0": "ʎbɹǝuǝ ǝɹnd ɟo ʇno ɹǝʇʇɐɯ buıʞɐW",
   "material.uberutilities.amogusium": "ɯnısnboɯⱯ",
   "material.uberutilities.anti_down_quark": "ʞɹɐnὉ uʍoᗡ ıʇuⱯ",
-  "material.uberutilities.anti_neutronium": "ɯnıuoɹʇnǝN ıʇuⱯ",
+  "material.uberutilities.anti_neutronium": "ɯnıuoɹʇnǝN-ıʇuⱯ",
   "material.uberutilities.anti_up_quark": "ʞɹɐnὉ d∩ ıʇuⱯ",
   "material.uberutilities.down_quark": "ʞɹɐnὉ uʍoᗡ",
-  "material.uberutilities.up_quark": "ʞɹɐnὉ d∩"
+  "material.uberutilities.up_quark": "ʞɹɐnὉ d∩",
+  "uberutilities.fluid.type_antimatter.tooltip": "ɹ§pןɹoʍʞ§ɹ§¡NOI⟘∩ⱯƆ ƎWƎᴚ⟘XƎ H⟘IM ƎꞀᗡNⱯH ¡ᴚƎ⟘⟘ⱯWI⟘NⱯן§ɔ§ɹ§oןןǝɥʞ§",
+  "uberutilities.fluid_pipe.antimatter_proof": "ɹ§pןɹoʍʞ§ɹ§ɹǝʇʇɐɯıʇuɐ buıuıɐʇuoɔ ɟo ǝןqɐdɐƆן§ɔ§ɹ§oןןǝɥʞ§"
 }
