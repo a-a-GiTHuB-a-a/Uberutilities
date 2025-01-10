@@ -90,37 +90,62 @@ neoForge {
 }
 
 repositories {
-	// Put repositories for dependencies here
-	// ForgeGradle automatically adds the Forge maven and Maven Central for you
-	
-	// If you have mod jar dependencies in ./libs, you can declare them as a repository like so.
-	// See https://docs.gradle.org/current/userguide/declaring_repositories.html#sub:flat_dir_resolver
-	// flatDir {
-	//     dir "libs"
-	// }
-	maven {
-		name = "GTCEu Maven"
-		url = "https://maven.gtceu.com"
-		content {
+	exclusiveContent {
+		forRepository {
+			maven {
+				name = "GTCEu Maven"
+				url = "https://maven.gtceu.com"
+			}
+		}
+		filter {
 			includeGroup "com.gregtechceu.gtceu"
 		}
 	}
-	maven {
-		name = "Registrate Maven"
-		url = "https://maven.tterrag.com/"
+	exclusiveContent {
+		forRepository {
+			maven {
+				name = "Registrate Maven"
+				url = "https://maven.tterrag.com/"
+			}
+		}
+		filter {
+			includeGroup "com.tterrag.registrate"
+		}
 	}
-	maven {
-		name = "LDLib Maven"
-		url = "https://maven.firstdarkdev.xyz/snapshots"
+	exclusiveContent {
+		forRepository {
+			maven {
+				name = "FirstDarkDev"
+				url = "https://maven.firstdarkdev.xyz/snapshots"
+			}
+		}
+		filter {
+			includeGroup "com.lowdragmc.ldlib"
+		}
 	}
-	maven {
-		name = "TerraformersMC"
-		url = "https://maven.terraformersmc.com/"
+	exclusiveContent {
+		forRepository {
+			maven {
+				name = "TerraformersMC"
+				url = "https://maven.terraformersmc.com/"
+			}
+		}
+		filter {
+			includeGroup "dev.emi"
+		}
 	}
-	maven {
-		name = "Modrinth"
-		url = "https://api.modrinth.com/maven/"
+	exclusiveContent {
+		forRepository {
+			maven {
+				name = "Modrinth"
+				url = "https://api.modrinth.com/maven/"
+			}
+		}
+		filter {
+			includeGroup "maven.modrinth"
+		}
 	}
+	mavenCentral()
 }
 
 dependencies {
