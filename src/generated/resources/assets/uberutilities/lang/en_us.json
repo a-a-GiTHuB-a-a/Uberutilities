@@ -1,0 +1,15 @@
+{
+  "block.uberutilities.field_exciter": "Field Exciter",
+  "block.uberutilities.neutron_glass": "Neutron Glass",
+  "block.uberutilities.neutronium_casing": "Neutronium Casing",
+  "item.uberutilities.neutrino_processor": "Neutrino Processor",
+  "item.uberutilities.neutrino_processor_assembly": "Neutrino Processor Assembly",
+  "item.uberutilities.neutrino_processor_computer": "Neutrino Processor Computer",
+  "item.uberutilities.neutrino_processor_mainframe": "Neutrino Processor Mainframe",
+  "material.uberutilities.amogusium": "Amogusium",
+  "material.uberutilities.anti_down_quark": "Anti Down Quark",
+  "material.uberutilities.anti_neutronium": "Anti Neutronium",
+  "material.uberutilities.anti_up_quark": "Anti Up Quark",
+  "material.uberutilities.down_quark": "Down Quark",
+  "material.uberutilities.up_quark": "Up Quark"
+}

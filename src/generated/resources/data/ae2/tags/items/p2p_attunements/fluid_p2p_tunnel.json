@@ -1,0 +1,11 @@
+{
+  "values": [
+    "uberutilities:up_quark_bucket",
+    "uberutilities:anti_up_quark_bucket",
+    "uberutilities:down_quark_bucket",
+    "uberutilities:anti_down_quark_bucket",
+    "uberutilities:anti_neutronium_bucket",
+    "uberutilities:amogusium_bucket",
+    "uberutilities:amogusium_plasma_bucket"
+  ]
+}
