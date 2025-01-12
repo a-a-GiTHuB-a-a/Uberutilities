@@ -36,20 +36,7 @@ neoForge {
 		client {
 			client()
 			sourceSet = sourceSets.main
-		}
-		client2 {
-			client()
-			programArguments.addAll("--username", "Dev2")
-		}
-		gradleOnlyClient {
-			client()
-			programArguments.addAll("--username", "Dev3")
-			ideName = ""
-		}
-		gradleOnlyClient2 {
-			client()
-			programArguments.addAll("--username", "Dev4")
-			disableIdeRun()
+			systemProperty("forge.enabledGameTestNamespaces", mod_id)
 		}
 		data {
 			data()
@@ -67,6 +54,7 @@ neoForge {
 		}
 		server {
 			server()
+			sourceSet = sourceSets.main
 		}
 	}
 	
