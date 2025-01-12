@@ -176,7 +176,11 @@ idea {
 // A missing property will result in an error. Properties are expanded using ${} Groovy notation.
 // When "copyIdeResources" is enabled, this will also run before the game launches in IDE environments.
 // See https://docs.gradle.org/current/dsl/org.gradle.language.jvm.tasks.ProcessResources.html
-tasks.named("processResources", ProcessResources).configure {
+var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
+	mkdir("run/server")
+	mkdir("run/gametest")
+	mkdir("run/data")
+	//var forgeVersion = forge_version.split("\\.")[0]
 	var replaceProperties = [
 		minecraft_version: minecraft_version,
 		minecraft_version_range: minecraft_version_range,
@@ -199,11 +203,17 @@ tasks.named("processResources", ProcessResources).configure {
 		mod_description: mod_description,
 	]
 	inputs.properties replaceProperties
+	expand replaceProperties
+	from "src/main/templates"
+	into "build/generated/sources/modMetadata"
 	
-	filesMatching(["META-INF/mods.toml", "pack.mcmeta"]) {
+	/*filesMatching(["META-INF/mods.toml", "pack.mcmeta"]) {
 		expand replaceProperties + [project: project]
-	}
+	}*/
 }
+
+sourceSets.main.resources.srcDir generateModMetadata
+neoForge.ideSyncTask generateModMetadata
 
 // Example for how to get properties into the manifest for reading at runtime.
 tasks.named("jar", Jar).configure {
