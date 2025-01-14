@@ -23,7 +23,6 @@ public class UberGTAddon implements IGTAddon {
 
 	@Override
 	public void registerElements() {
-		IGTAddon.super.registerElements();
 		Uberelements.init();
 	}
 
