@@ -8,9 +8,8 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-
 import javax.annotation.Nonnull;
-
+import java.lang.reflect.Method; //TODO: remove when debug ends
 import static com.daboxen.uberutilities.Uberutilities.LOGGER;
 import static com.daboxen.uberutilities.Uberutilities.UBER_REGISTRATE;
 
@@ -39,5 +38,7 @@ public class Uberblocks {
 	
 	public static void init() {
 		LOGGER.info("Registering custom blocks");
+		Method[] renderTypes = RenderType.class.getMethods();
+		for (Method method : renderTypes) {LOGGER.info("Method: " + method.getName());}
 	}
 }
