@@ -180,7 +180,6 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
 	mkdir("run/server")
 	mkdir("run/gametest")
 	mkdir("run/data")
-	//var forgeVersion = forge_version.split("\\.")[0]
 	var replaceProperties = [
 		minecraft_version: minecraft_version,
 		minecraft_version_range: minecraft_version_range,
@@ -206,10 +205,6 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
 	expand replaceProperties
 	from "src/main/templates"
 	into "build/generated/sources/modMetadata"
-	
-	filesMatching(["META-INF/mods.toml", "pack.mcmeta"]) {
-		expand replaceProperties + [project: project]
-	}
 }
 
 sourceSets.main.resources.srcDir generateModMetadata
