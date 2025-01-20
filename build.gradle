@@ -199,6 +199,13 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
 sourceSets.main.resources.srcDir generateModMetadata
 neoForge.ideSyncTask generateModMetadata
 
+jar.archiveClassifier = "dev"
+reobfJar.archiveClassifier = ""
+
+base {
+	archivesName = "$mod_id-$minecraft_version"
+}
+
 afterEvaluate {
 	tasks.withType(org.gradle.jvm.tasks.Jar).configureEach {
 		destinationDirectory = file("build/libs/")
