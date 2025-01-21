@@ -8,6 +8,8 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SoundType;
+
 import javax.annotation.Nonnull;
 import java.lang.reflect.Method; //TODO: remove when debug ends
 import static com.daboxen.uberutilities.Uberutilities.LOGGER;
@@ -17,7 +19,7 @@ public class Uberblocks {
 	public static final BlockEntry<Block> NEUTRONIUM_MACHINE_CASING = createCasing("neutronium_casing", Uberutilities.id("block/neutronium_casing"), 5);
 	public static final BlockEntry<Block> NEUTRON_GLASS = UBER_REGISTRATE.block("neutron_glass", Block::new)
 		.initialProperties(NEUTRONIUM_MACHINE_CASING)
-		.addLayer(() -> RenderType::translucent)
+		.properties(p -> p.sound(SoundType.GLASS))
 		.blockstate((ctx, prov) -> prov.models().getExistingFile(Uberutilities.id("block/neutron_glass")))
 		.item()
 		.build()
