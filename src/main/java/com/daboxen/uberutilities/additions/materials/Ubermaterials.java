@@ -50,7 +50,7 @@ public class Ubermaterials {
 
 		AntiNeutronium = new Material.Builder(Uberutilities.id("anti_neutronium"))
 			.element(Uberelements.AntiNeutronium)
-			.color(0xff0000/*0x000000*/)//temp
+			.color(0x000000)
 			.secondaryColor(0xffffff)
 			.iconSet(IconSets.WHITE_OUTLINE)
 			.ingot().liquid(new FluidBuilder().attribute(ExtendedFluidAttributes.ANTIMATTER).temperature(100000))
