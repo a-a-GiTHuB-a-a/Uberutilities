@@ -154,6 +154,10 @@ dependencies {
 	// http://www.gradle.org/docs/current/userguide/dependency_management.html
 }
 
+artifacts {
+	archives tasks.reobfJar
+}
+
 idea {
 	module {
 		downloadSources = true
@@ -238,10 +242,6 @@ publishing {
 			url "file://${project.projectDir}/mcmodsrepo"
 		}
 	}
-}
-
-artifacts {
-	archives tasks.reobfJar
 }
 
 tasks.withType(JavaCompile).configureEach {
