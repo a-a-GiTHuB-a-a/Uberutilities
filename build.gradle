@@ -108,6 +108,7 @@ repositories {
 			}
 		}
 		filter {
+			includeGroup "dev.toma.configuration"
 			includeGroup "com.lowdragmc.ldlib"
 		}
 	}
@@ -146,6 +147,8 @@ dependencies {
 	modImplementation("com.tterrag.registrate:Registrate:${registrate_version}") {transitive = false}
 	modImplementation("com.lowdragmc.ldlib:ldlib-forge-${minecraft_version}:${ldlib_version}") {transitive = false}
 	
+	modApi("dev.toma.configuration:configuration-forge-${minecraft_version}:${configuration_version}")
+	
 	modRuntimeOnly("dev.emi:emi-forge:${emi_version}+${minecraft_version}")
 	modRuntimeOnly("maven.modrinth:jade:${jade_version}")
 	
@@ -181,6 +184,7 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
 		gtceu_version: gtceu_version,
 		ldlib_version: ldlib_version,
 		registrate_version: registrate_version,
+		configuation_version: configuration_version,
 		jade_version: jade_version,
 		emi_version: emi_version,
 		forge_version: forge_version,
