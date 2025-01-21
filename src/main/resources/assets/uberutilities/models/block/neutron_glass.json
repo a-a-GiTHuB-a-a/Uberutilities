@@ -2,10 +2,10 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "kubejs:block/neutron_glass_edges",
-		"1": "kubejs:block/neutron_glass_main_face",
-		"2": "kubejs:block/neutron_glass_corners",
-		"particle": "kubejs:block/neutron_glass_edges"
+		"0": "uberutilities:block/neutron_glass_edges",
+		"1": "uberutilities:block/neutron_glass_main_face",
+		"2": "uberutilities:block/neutron_glass_corners",
+		"particle": "uberutilities:block/neutron_glass_main_face"
 	},
 	"elements": [
 		{
