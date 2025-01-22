@@ -20,7 +20,8 @@ public class Uberblocks {
 	public static final BlockEntry<Block> NEUTRON_GLASS = UBER_REGISTRATE.block("neutron_glass", Block::new)
 		.initialProperties(NEUTRONIUM_MACHINE_CASING)
 		.properties(p -> p.sound(SoundType.GLASS))
-		.blockstate((ctx, prov) -> prov.models().getExistingFile(Uberutilities.id("block/neutron_glass")))
+		.addLayer(() -> RenderType::translucent)
+		.blockstate((ctx, prov) -> prov.simpleBlock(ctx.getEntry(), prov.models().getExistingFile(Uberutilities.id("block/neutron_glass"))))
 		.item()
 		.build()
 		.register();
