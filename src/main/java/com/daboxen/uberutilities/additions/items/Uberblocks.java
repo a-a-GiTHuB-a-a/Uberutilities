@@ -20,19 +20,19 @@ import static com.daboxen.uberutilities.Uberutilities.UBER_REGISTRATE;
 public class Uberblocks {
 	public static final BlockEntry<Block> NEUTRONIUM_MACHINE_CASING = createCasing("neutronium_casing", Uberutilities.id("block/neutronium_casing"), 5);
 	public static final BlockEntry<ShapeableBlock> NEUTRON_GLASS = UBER_REGISTRATE.block("neutron_glass", props -> new ShapeableBlock(props,
-			Shapes.box(1, 1, 1, 15, 15, 15), //center
-			Shapes.box(0,0,0,1,16,1),
-			Shapes.box(15,0,0,16,16,1),
-			Shapes.box(0,0,15,1,16,16),
-			Shapes.box(15,0,15,16,16,16), //pillars
-			Shapes.box(1,0,0,15,1,1),
-			Shapes.box(1,15,0,15,16,1),
-			Shapes.box(1,0,15,15,1,16),
-			Shapes.box(1,15,15,15,16,16), //edges.x
-			Shapes.box(0,0,1,1,1,15),
-			Shapes.box(15,0,1,16,1,15),
-			Shapes.box(0,15,1,1,16,15),
-			Shapes.box(15,15,1,16,16,15) //edges.z
+			Shapes.box(1d/16, 1d/16, 1d/16, 15d/16, 15d/16, 15d/16), //center
+			Shapes.box(0,0,0,1d/16,1,1d/16),
+			Shapes.box(15d/16,0,0,1,1,1d/16),
+			Shapes.box(0,0,15d/16,1d/16,1,1),
+			Shapes.box(15d/16,0,15d/16,1,1,1), //pillars
+			Shapes.box(1d/16,0,0,15d/16,1d/16,1d/16),
+			Shapes.box(1d/16,15d/16,0,15d/16,1,1d/16),
+			Shapes.box(1d/16,0,15d/16,15d/16,1d/16,1),
+			Shapes.box(1d/16,15d/16,15d/16,15d/16,1,1), //edges.x
+			Shapes.box(0,0,1d/16,1d/16,1d/16,15d/16),
+			Shapes.box(15d/16,0,1d/16,1,1d/16,15d/16),
+			Shapes.box(0,15d/16,1d/16,1d/16,1,15d/16),
+			Shapes.box(15d/16,15d/16,1d/16,1,1,15d/16) //edges.z
 		))
 		.initialProperties(NEUTRONIUM_MACHINE_CASING)
 		.properties(p -> p.sound(SoundType.GLASS))
