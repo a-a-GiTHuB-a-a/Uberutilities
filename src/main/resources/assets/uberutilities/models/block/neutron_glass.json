@@ -1,7 +1,6 @@
 {
 	"parent": "minecraft:block/block",
 	"credit": "Made with Blockbench",
-	"render_type": "minecraft:translucent",
 	"texture_size": [64, 64],
 	"textures": {
 		"0": "uberutilities:block/neutron_glass_edges",
