@@ -9,6 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 
 import javax.annotation.Nonnull;
 import java.lang.reflect.Method; //TODO: remove when debug ends
@@ -20,6 +21,7 @@ public class Uberblocks {
 	public static final BlockEntry<Block> NEUTRON_GLASS = UBER_REGISTRATE.block("neutron_glass", Block::new)
 		.initialProperties(NEUTRONIUM_MACHINE_CASING)
 		.properties(p -> p.sound(SoundType.GLASS))
+		.properties(BlockBehaviour.Properties::dynamicShape)
 		.addLayer(() -> RenderType::translucent)
 		.blockstate((ctx, prov) -> prov.simpleBlock(ctx.getEntry(), prov.models().getExistingFile(Uberutilities.id("block/neutron_glass"))))
 		.item()
