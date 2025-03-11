@@ -1,6 +1,7 @@
 package com.daboxen.uberutilities.additions.items;
 
 import com.daboxen.uberutilities.Uberutilities;
+import com.daboxen.uberutilities.api.CasingItem;
 import com.daboxen.uberutilities.api.ShapeableBlock;
 import com.gregtechceu.gtceu.api.data.tag.TagUtil;
 import com.gregtechceu.gtceu.common.data.GTModels;
@@ -18,6 +19,8 @@ import static com.daboxen.uberutilities.Uberutilities.LOGGER;
 import static com.daboxen.uberutilities.Uberutilities.UBER_REGISTRATE;
 
 public class Uberblocks {
+	public static CasingItem[] casings;
+	
 	public static final BlockEntry<Block> NEUTRONIUM_MACHINE_CASING = createCasing("neutronium_casing", Uberutilities.id("block/neutronium_casing"), 5);
 	public static final BlockEntry<ShapeableBlock> NEUTRON_GLASS = UBER_REGISTRATE.block("neutron_glass", props -> new ShapeableBlock(props,
 			Shapes.box(1d/16, 1d/16, 1d/16, 15d/16, 15d/16, 15d/16), //center
@@ -43,7 +46,7 @@ public class Uberblocks {
 		.register();
 	
 	public static @Nonnull BlockEntry<Block> createCasing(@Nonnull String name, @Nonnull ResourceLocation texture, int tier) {
-		return UBER_REGISTRATE.block(name, Block::new)
+		BlockEntry<Block> block =  UBER_REGISTRATE.block(name, Block::new)
 			.initialProperties(() -> Blocks.IRON_BLOCK)
 			.properties(p -> p.isValidSpawn((state, level, pos, ent) -> false))
 			.properties(p -> (tier >= 3 ? p.explosionResistance(-1) : p))
@@ -53,6 +56,8 @@ public class Uberblocks {
 			.item()
 			.build()
 			.register();
+		//casings;
+		return block;
 	}
 	
 	public static void init() {
