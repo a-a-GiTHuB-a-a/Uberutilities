@@ -1,6 +1,7 @@
 package com.daboxen.uberutilities;
 
 import com.daboxen.uberutilities.additions.materials.Uberelements;
+import com.daboxen.uberutilities.additions.recipes.NewRecipes;
 import com.gregtechceu.gtceu.api.addon.GTAddon;
 import com.gregtechceu.gtceu.api.addon.IGTAddon;
 import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
@@ -37,7 +38,7 @@ public class UberGTAddon implements IGTAddon {
 
 	@Override
 	public void addRecipes(Consumer<FinishedRecipe> provider) {
-		//CustomRecipes.init(provider);
+		NewRecipes.addRecipes(provider);
 	}
 	
 	// If you have custom ingredient types, uncomment this & change to match your capability.
