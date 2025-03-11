@@ -1,14 +1,12 @@
 package com.daboxen.uberutilities.additions.recipes;
 
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;
-import static com.gregtechceu.gtceu.common.data.GTMaterials.*;
-import static com.gregtechceu.gtceu.common.data.GTRecipeTypes.ALLOY_SMELTER_RECIPES;
-
 import com.gregtechceu.gtceu.api.data.chemical.material.properties.PropertyKey;
 import com.gregtechceu.gtceu.api.data.chemical.material.stack.MaterialStack;
 import com.gregtechceu.gtceu.api.data.tag.TagPrefix;
+import static com.gregtechceu.gtceu.common.data.GTMaterials.*;
+import static com.gregtechceu.gtceu.common.data.GTRecipeTypes.ALLOY_SMELTER_RECIPES;
 import net.minecraft.data.recipes.FinishedRecipe;
-
 import javax.annotation.Nonnull;
 import java.util.function.Consumer;
 
