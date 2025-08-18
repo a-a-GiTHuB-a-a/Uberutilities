@@ -1,13 +1,20 @@
 package com.daboxen.uberutilities.api;
 
+import static com.daboxen.uberutilities.Uberutilities.UBER_REGISTRATE;
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;
+import com.gregtechceu.gtceu.api.data.tag.TagUtil;
+import com.gregtechceu.gtceu.common.data.GTModels;
 import com.tterrag.registrate.util.entry.BlockEntry;
+import javax.annotation.Nonnull;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 
 public class CasingItem {
-	public BlockEntry<Block> block;
-	public Material frameMaterial;
-	public Material plateMaterial;
+	private BlockEntry<Block> block;
+	protected Material frameMaterial;
+	protected Material plateMaterial;
 	/**
 	 * The GT tier of the casing.
 	 */
@@ -16,16 +23,31 @@ public class CasingItem {
 	/**
 	 * Create a new `CasingItem`.
 	 * @param block - The block that represents the `CasingItem`.
-	 * @param frameMaterial - The material used for the frame-box in the recipe.
-	 * @param plateMaterial - The material used for the plates in the recipe.
-	 * @param tier - The tier of the casing, represented by a number (1 = LV, 2 = MV, etc.)
 	 */
-	public CasingItem(BlockEntry<Block> block, Material frameMaterial, Material plateMaterial, int tier) {
+	public CasingItem(BlockEntry<Block> block) {
 		this.block = block;
-		this.frameMaterial = frameMaterial;
-		this.plateMaterial = plateMaterial;
-		this.tier = tier;
 	}
 	
+	public BlockEntry<Block> getBlock() {
+		return block;
+	}
 	
+	public static class CasingItemBuilder {
+		private CasingItem item;
+		
+		public CasingItemBuilder(@Nonnull String name, @Nonnull ResourceLocation texture) {
+			item = new CasingItem(UBER_REGISTRATE.block(name, Block::new)
+				.initialProperties(() -> Blocks.IRON_BLOCK)
+				.properties(p -> p.isValidSpawn((state, level, pos, ent) -> false))
+				.addLayer(() -> RenderType::cutoutMipped)
+				.blockstate(GTModels.cubeAllModel(name, texture))
+				.tag(TagUtil.createBlockTag("mineable/wrench", false))
+				.item()
+				.build()
+				.register());
+		}
+		public CasingItem build() {
+			return item;
+		}
+	}
 }
