@@ -20,8 +20,8 @@ import static com.daboxen.uberutilities.Uberutilities.UBER_REGISTRATE;
 public class Uberblocks {
 	public static ArrayList<CasingItem> casings = new ArrayList<>();
 	
-	public static final BlockEntry<Block> NEUTRONIUM_MACHINE_CASING = createCasing("neutronium_casing", Uberutilities.id("block/neutronium_casing"));
-	public static final BlockEntry<Block> NAQUADAH_MACHINE_CASING = createCasing("naquadah_casing", Uberutilities.id("block/naquadah_casing"));
+	public static final BlockEntry<Block> NEUTRONIUM_MACHINE_CASING = createCasing("neutronium_casing", Uberutilities.id("block/casing/solid/neutronium_casing"));
+	public static final BlockEntry<Block> NAQUADAH_MACHINE_CASING = createCasing("naquadah_casing", Uberutilities.id("block/casing/solid/naquadah_casing"));
 	public static final BlockEntry<ShapeableBlock> NEUTRON_GLASS = UBER_REGISTRATE.block("neutron_glass", props -> new ShapeableBlock(props,
 			Shapes.box(1d/16, 1d/16, 1d/16, 15d/16, 15d/16, 15d/16), //center
 			Shapes.box(0,0,0,1d/16,1,1d/16),

@@ -14,7 +14,6 @@ import com.gregtechceu.gtceu.api.machine.MachineDefinition;
 import com.gregtechceu.gtceu.api.recipe.GTRecipeType;
 import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -49,7 +48,7 @@ public class Uberutilities {
 		// Most other events are fired on Forge's bus.
 		// If we want to use annotations to register event listeners,
 		// we need to register our object like this!
-		MinecraftForge.EVENT_BUS.register(this);
+		/*MinecraftForge.EVENT_BUS.register(this);*/
 	}
 
 	public static @Nonnull ResourceLocation id(@Nonnull String path) { //yoinked this from GCyR

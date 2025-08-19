@@ -37,7 +37,7 @@ public class QuantumFieldExciter {
 			.where(' ', Predicates.any())
 			.where('-', Predicates.air()).build()
 		)
-		.workableCasingModel(Uberutilities.id("block/neutronium_casing"), GTCEu.id("block/multiblock/fusion_reactor"))
+		.workableCasingModel(Uberutilities.id("block/casing/solid/neutronium_casing"), GTCEu.id("block/multiblock/large_chemical_reactor")) //todo: change back to fusion reactor
 		.tooltips(Component.translatable("machine.uberutilities.field_exciter.tooltip.0"))
 		.register();
 	
