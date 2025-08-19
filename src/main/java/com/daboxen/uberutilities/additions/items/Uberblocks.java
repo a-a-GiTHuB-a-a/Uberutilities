@@ -47,6 +47,7 @@ public class Uberblocks {
 	
 	public static @Nonnull BlockEntry<Block> createCasing(@Nonnull String name, @Nonnull ResourceLocation texture) {
 		CasingItem casing = new CasingItem.CasingItemBuilder(name, texture).build();
+		casings.add(casing);
 		return casing.getBlock();
 	}
 	
