@@ -3,7 +3,7 @@ package com.daboxen.uberutilities.api;
 import static com.daboxen.uberutilities.Uberutilities.UBER_REGISTRATE;
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;
 import com.gregtechceu.gtceu.api.data.tag.TagUtil;
-import com.gregtechceu.gtceu.common.data.GTModels;
+import com.gregtechceu.gtceu.common.data.models.GTModels;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import javax.annotation.Nonnull;
 import net.minecraft.client.renderer.RenderType;
@@ -40,7 +40,7 @@ public class CasingItem {
 				.initialProperties(() -> Blocks.IRON_BLOCK)
 				.properties(p -> p.isValidSpawn((state, level, pos, ent) -> false))
 				.addLayer(() -> RenderType::cutoutMipped)
-				.blockstate(GTModels.cubeAllModel(name, texture))
+				.exBlockstate(GTModels.cubeAllModel(texture))
 				.tag(TagUtil.createBlockTag("mineable/wrench", false))
 				.item()
 				.build()
