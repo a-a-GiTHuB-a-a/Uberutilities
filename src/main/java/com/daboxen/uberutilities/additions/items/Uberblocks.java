@@ -54,6 +54,6 @@ public class Uberblocks {
 	public static void init() {
 		LOGGER.info("Registering custom blocks");
 		Method[] renderTypes = RenderType.class.getMethods();
-		for (Method method : renderTypes) {LOGGER.info("Method: " + method.getName());}
+		for (Method method : renderTypes) {LOGGER.info("Method: {}", method.getName());}
 	}
 }
