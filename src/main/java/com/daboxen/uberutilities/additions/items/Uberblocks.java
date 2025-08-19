@@ -3,18 +3,15 @@ package com.daboxen.uberutilities.additions.items;
 import com.daboxen.uberutilities.Uberutilities;
 import com.daboxen.uberutilities.api.CasingItem;
 import com.daboxen.uberutilities.api.ShapeableBlock;
-import com.gregtechceu.gtceu.api.data.tag.TagUtil;
-import com.gregtechceu.gtceu.common.data.GTModels;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.phys.shapes.Shapes;
 
 import javax.annotation.Nonnull;
-import java.lang.reflect.Method; //TODO: remove when debug ends
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 import static com.daboxen.uberutilities.Uberutilities.LOGGER;

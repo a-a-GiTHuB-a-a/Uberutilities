@@ -33,7 +33,7 @@ public class QuantumFieldExciter {
 			.where('N', Predicates.blocks(Uberblocks.NEUTRONIUM_MACHINE_CASING.get())
 				.or(Predicates.autoAbilities(RecipeTypes.FIELD_EXCITER))
 			)
-			.where('N', Predicates.blocks(Uberblocks.NEUTRONIUM_MACHINE_CASING.get()))
+			.where('Q', Predicates.blocks(Uberblocks.NAQUADAH_MACHINE_CASING.get()))
 			.where(' ', Predicates.any())
 			.where('-', Predicates.air()).build()
 		)
