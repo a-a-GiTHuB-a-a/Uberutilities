@@ -1,6 +1,8 @@
 package com.daboxen.uberutilities.additions.machines;
 
 import com.daboxen.uberutilities.Uberutilities;
+import static com.daboxen.uberutilities.Uberutilities.LOGGER;
+import static com.daboxen.uberutilities.Uberutilities.UBER_REGISTRATE;
 import com.daboxen.uberutilities.additions.items.Uberblocks;
 import com.daboxen.uberutilities.api.RecipeTypes;
 import com.gregtechceu.gtceu.GTCEu;
@@ -12,8 +14,6 @@ import com.gregtechceu.gtceu.api.pattern.Predicates;
 import com.gregtechceu.gtceu.api.recipe.OverclockingLogic;
 import com.gregtechceu.gtceu.common.data.GTRecipeModifiers;
 import net.minecraft.network.chat.Component;
-
-import static com.daboxen.uberutilities.Uberutilities.UBER_REGISTRATE;
 
 public class QuantumFieldExciter {
 	public static final MultiblockMachineDefinition FIELD_EXCITER = UBER_REGISTRATE.multiblock("field_exciter", WorkableElectricMultiblockMachine::new)
@@ -42,6 +42,6 @@ public class QuantumFieldExciter {
 		.register();
 	
 	public static void init() {
-		//making things
+		LOGGER.info("Registering the QFE");
 	}
 }
