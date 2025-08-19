@@ -10,7 +10,6 @@ import com.gregtechceu.gtceu.api.machine.multiblock.WorkableElectricMultiblockMa
 import com.gregtechceu.gtceu.api.pattern.FactoryBlockPattern;
 import com.gregtechceu.gtceu.api.pattern.Predicates;
 import com.gregtechceu.gtceu.api.recipe.OverclockingLogic;
-import com.gregtechceu.gtceu.client.renderer.machine.WorkableCasingMachineRenderer;
 import com.gregtechceu.gtceu.common.data.GTRecipeModifiers;
 import net.minecraft.network.chat.Component;
 
@@ -38,7 +37,7 @@ public class QuantumFieldExciter {
 			.where(' ', Predicates.any())
 			.where('-', Predicates.air()).build()
 		)
-		.renderer(() -> new WorkableCasingMachineRenderer(Uberutilities.id("block/neutronium_casing"), GTCEu.id("block/multiblock/fusion_reactor")))
+		.workableCasingModel(Uberutilities.id("block/neutronium_casing"), GTCEu.id("block/multiblock/fusion_reactor"))
 		.tooltips(Component.translatable("machine.uberutilities.field_exciter.tooltip.0"))
 		.register();
 	
