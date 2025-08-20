@@ -3,6 +3,7 @@ package com.daboxen.uberutilities.additions.materials;
 import com.daboxen.uberutilities.Uberutilities;
 import com.daboxen.uberutilities.api.ExtendedFluidAttributes;
 import com.daboxen.uberutilities.api.IconSets;
+import com.daboxen.uberutilities.data.lang.LangHandler;
 import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;
 import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlags;
@@ -52,6 +53,7 @@ public class Ubermaterials {
 			.iconSet(IconSets.WHITE_OUTLINE)
 			.ingot().liquid(new FluidBuilder().attribute(ExtendedFluidAttributes.ANTIMATTER).temperature(100000))
 			.buildAndRegister();
+		LangHandler.addReplacementEntry("material.uberutilities.anti_neutronium", "Anti-Neutronium");
 
 		Amogusium = new Material.Builder(Uberutilities.id("amogusium"))
 			.element(Uberelements.Amogusium)

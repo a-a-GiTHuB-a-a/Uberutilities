@@ -5,6 +5,7 @@ import static com.daboxen.uberutilities.Uberutilities.LOGGER;
 import static com.daboxen.uberutilities.Uberutilities.UBER_REGISTRATE;
 import com.daboxen.uberutilities.additions.items.Uberblocks;
 import com.daboxen.uberutilities.api.RecipeTypes;
+import com.daboxen.uberutilities.data.lang.LangHandler;
 import com.gregtechceu.gtceu.GTCEu;
 import com.gregtechceu.gtceu.api.data.RotationState;
 import com.gregtechceu.gtceu.api.machine.MultiblockMachineDefinition;
@@ -44,5 +45,6 @@ public class QuantumFieldExciter {
 	
 	public static void init() {
 		LOGGER.info("Registering the QFE");
+		LangHandler.addReplacementEntry(FIELD_EXCITER.getBlock().getDescriptionId(), "Quantum Field Exciter");
 	}
 }
