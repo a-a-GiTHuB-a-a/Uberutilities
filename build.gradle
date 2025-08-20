@@ -51,6 +51,7 @@ neoForge {
 			programArguments.addAll("--all")
 			programArguments.addAll("--output", file("src/generated/resources/").getAbsolutePath())
 			programArguments.addAll("--existing", file("src/main/resources/").getAbsolutePath())
+			programArguments.addAll("--existing-mod", "gtceu")
 		}
 		server {
 			server()
