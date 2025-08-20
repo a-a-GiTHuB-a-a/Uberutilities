@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "uberutilities:block/neutronium_casing"
+    "all": "uberutilities:block/casing/solid/neutronium_casing"
   }
 }
