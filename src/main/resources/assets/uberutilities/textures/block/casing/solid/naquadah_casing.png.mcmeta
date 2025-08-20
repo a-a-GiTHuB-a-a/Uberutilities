@@ -1,5 +1,5 @@
 {
 	"ldlib": {
-		"connection": "uberutilities:block/naquadah_casing_ctm"
+		"connection": "uberutilities:block/casing/solid/naquadah_casing_ctm"
 	}
 }

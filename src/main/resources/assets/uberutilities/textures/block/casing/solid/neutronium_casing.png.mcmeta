@@ -1,5 +1,5 @@
 {
 	"ldlib": {
-		"connection": "uberutilities:block/neutronium_casing_ctm"
+		"connection": "uberutilities:block/casing/solid/neutronium_casing_ctm"
 	}
 }
