@@ -1,8 +1,8 @@
 {
-  "block.uberutilities.field_exciter": "Field Exciter",
-  "block.uberutilities.naquadah_casing": "Naquadah Casing",
+  "block.uberutilities.field_exciter": "Quantum Field Exciter",
+  "block.uberutilities.naquadah_casing": "Antimatter-Proof Naquadah Machine Casing",
   "block.uberutilities.neutron_glass": "Neutron Glass",
-  "block.uberutilities.neutronium_casing": "Neutronium Casing",
+  "block.uberutilities.neutronium_casing": "Radiation-Blocking Neutronium Machine Casing",
   "item.uberutilities.neutrino_processor": "Neutrino Processor",
   "item.uberutilities.neutrino_processor_assembly": "Neutrino Processor Assembly",
   "item.uberutilities.neutrino_processor_computer": "Neutrino Processor Computer",

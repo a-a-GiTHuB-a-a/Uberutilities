@@ -1,5 +1,6 @@
 package com.daboxen.uberutilities.api;
 
+import static com.daboxen.uberutilities.Uberutilities.LOGGER;
 import static com.daboxen.uberutilities.Uberutilities.UBER_REGISTRATE;
 
 import com.daboxen.uberutilities.data.lang.LangHandler;
@@ -38,7 +39,7 @@ public class CasingItem {
 	}
 	
 	public static class CasingItemBuilder {
-		private CasingItem item;
+		private final CasingItem item;
 		
 		public CasingItemBuilder(@Nonnull String id, @Nonnull ResourceLocation texture) {
 			item = new CasingItem(UBER_REGISTRATE.block(id, Block::new)
@@ -58,7 +59,7 @@ public class CasingItem {
 		public CasingItem build() {
 			casings.add(item);
 			if (item.name != null) {
-				LangHandler.addReplacementEntry(item.block.get().getDescriptionId(), item.name);
+				LangHandler.addReplacementEntry(()->item.block.get().getDescriptionId(), item.name);
 			}
 			return item;
 		}

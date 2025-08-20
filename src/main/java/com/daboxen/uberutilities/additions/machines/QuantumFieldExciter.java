@@ -41,10 +41,10 @@ public class QuantumFieldExciter {
 		)
 		.workableCasingModel(Uberutilities.id("block/casing/solid/neutronium_casing"), GTCEu.id("block/multiblock/fusion_reactor"))
 		.tooltips(Component.translatable("machine.uberutilities.field_exciter.tooltip.0"))
+		.langValue("Quantum Field Exciter")
 		.register();
 	
 	public static void init() {
 		LOGGER.info("Registering the QFE");
-		LangHandler.addReplacementEntry(FIELD_EXCITER.getBlock().getDescriptionId(), "Quantum Field Exciter");
 	}
 }

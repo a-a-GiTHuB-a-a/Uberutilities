@@ -1,14 +1,20 @@
 package com.daboxen.uberutilities.data.lang;
 
+import static com.daboxen.uberutilities.Uberutilities.LOGGER;
 import static com.gregtechceu.gtceu.data.lang.LangHandler.replace;
 import com.tterrag.registrate.providers.RegistrateLangProvider;
 import javax.annotation.Nonnull;
+import java.util.HashMap;
 import java.util.Map;
+import java.util.function.Supplier;
 
 public class LangHandler {
-	private static Map<String, String> replacements;
+	private static final Map<Supplier<String>, String> replacements = new HashMap<>();
 	
 	public static void addReplacementEntry(@Nonnull String key, @Nonnull String value) {
+		replacements.put(()->key, value);
+	}
+	public static void addReplacementEntry(@Nonnull Supplier<String> key, @Nonnull String value) {
 		replacements.put(key, value);
 	}
 	
@@ -20,8 +26,11 @@ public class LangHandler {
 		
 		provider.add("machine.uberutilities.field_exciter.tooltip.0", "Making matter out of pure energy");
 		
-		for (Map.Entry<String, String> entry : replacements.entrySet()) {
-			replace(provider, entry.getKey(), entry.getValue());
+		for (Map.Entry<Supplier<String>, String> entry : replacements.entrySet()) {
+			String key = entry.getKey().get();
+			String name = entry.getValue();
+			LOGGER.info("Replacing lang data at key {} with {}", key, name);
+			replace(provider, key, name);
 		}
 	}
 }
