@@ -1,0 +1,50 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"particle": "#base_side",
+		"overlay": "uberutilities:block/casing/overlay/emitter_overlay"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"down": {
+					"texture": "#base_bottom",
+					"cullface": "down",
+					"tintindex": 1
+				}, "up": {
+					"texture": "#base_top",
+					"cullface": "up",
+					"tintindex": 1
+				}, "north": {
+					"texture": "#base_side",
+					"cullface": "north",
+					"tintindex": 1
+				}, "south": {
+					"texture": "#base_side",
+					"cullface": "south",
+					"tintindex": 1
+				}, "west": {
+					"texture": "#base_side",
+					"cullface": "west",
+					"tintindex": 1
+				}, "east": {
+					"texture": "#base_side",
+					"cullface": "east",
+					"tintindex": 1
+				}
+			}
+		},
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"up": {
+					"texture": "#overlay_",
+					"cullface": "up"
+				}
+			}
+		}
+	]
+}

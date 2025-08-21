@@ -1,11 +1,8 @@
 package com.daboxen.uberutilities.additions.machines;
-
 import static com.daboxen.uberutilities.Uberutilities.LOGGER;
 
-public class MachineRegistrar {
+public class Singleblocks {
 	public static void init() {
-		LOGGER.info("Registering custom machines");
-		Singleblocks.init();
-		QuantumFieldExciter.init();
+		LOGGER.info("Registering singleblocks");
 	}
 }

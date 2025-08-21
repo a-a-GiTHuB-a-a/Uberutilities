@@ -1,12 +1,10 @@
 package com.daboxen.uberutilities.api;
 
-import static com.daboxen.uberutilities.Uberutilities.LOGGER;
-import static com.daboxen.uberutilities.Uberutilities.UBER_REGISTRATE;
-
 import com.daboxen.uberutilities.data.lang.LangHandler;
+import static com.daboxen.uberutilities.Uberutilities.UBER_REGISTRATE;
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;
-import com.gregtechceu.gtceu.api.data.tag.TagUtil;
 import com.gregtechceu.gtceu.common.data.models.GTModels;
+import com.gregtechceu.gtceu.data.recipe.CustomTags;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import java.util.ArrayList;
 import javax.annotation.Nonnull;
@@ -47,7 +45,7 @@ public class CasingItem {
 				.properties(p -> p.isValidSpawn((state, level, pos, ent) -> false))
 				.addLayer(() -> RenderType::cutoutMipped)
 				.exBlockstate(GTModels.cubeAllModel(texture))
-				.tag(TagUtil.createBlockTag("mineable/wrench", false))
+				.tag(CustomTags.MINEABLE_WITH_CONFIG_VALID_PICKAXE_WRENCH)
 				.item()
 				.build()
 				.register());
