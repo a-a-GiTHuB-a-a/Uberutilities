@@ -20,6 +20,9 @@ import static com.daboxen.uberutilities.Uberutilities.UBER_REGISTRATE;
 public class Uberblocks {
 	public static final BlockEntry<Block> NEUTRONIUM_MACHINE_CASING = createCasing("Radiation-Blocking Neutronium Machine Casing", "neutronium_casing", Uberutilities.id("block/casing/solid/neutronium_casing"));
 	public static final BlockEntry<Block> NAQUADAH_MACHINE_CASING = createCasing("Antimatter-Proof Naquadah Machine Casing", "naquadah_casing", Uberutilities.id("block/casing/solid/naquadah_casing"));
+
+    public static final BlockEntry<Block> HTP_MATTER_PIPE = createCasing("Encased High-Throughput Matter Pipe", "http_matter_pipe", Uberutilities.id("block/casing/pipe/htp_matter_pipe"));
+
 	public static final BlockEntry<ShapeableBlock> NEUTRON_GLASS = UBER_REGISTRATE.block("neutron_glass", props -> new ShapeableBlock(props,
 			Shapes.box(1d/16, 1d/16, 1d/16, 15d/16, 15d/16, 15d/16), //center
 			Shapes.box(0,0,0,1d/16,1,1d/16),
