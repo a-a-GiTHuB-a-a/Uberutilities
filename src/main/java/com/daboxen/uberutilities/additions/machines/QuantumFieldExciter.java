@@ -66,7 +66,8 @@ public class QuantumFieldExciter {
 			.where("I", Predicates.blocks(Uberblocks.HTP_MATTER_PIPE.get()))
 			.where("P", Predicates.blocks(Uberblocks.HTP_PUMP.get()))
 			.where("D", Predicates.blocks(GTBlocks.SUPERCONDUCTING_COIL.get()))
-			.where("K", Predicates.blocks((Block[]) Arrays.stream(Uberblocks.EMISSION_CASINGS).map(BlockEntry::get).toArray()))
+			.where("K", Predicates.blocks(Uberblocks.EMISSION_CASINGS.stream().map(BlockEntry::get).toArray(Block[]::new)))
+			.where("S", Predic)
 			.build()
 		)
 		//spotless:on

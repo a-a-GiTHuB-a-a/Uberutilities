@@ -11,6 +11,8 @@ import com.gregtechceu.gtceu.data.recipe.CustomTags;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import javax.annotation.Nonnull;
 import java.lang.reflect.Method;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Locale;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
@@ -28,7 +30,36 @@ public class Uberblocks {
     public static final BlockEntry<Block> HTP_ANTIMATTER_PIPE = createCasing("Encased High-Throughput Antimatter Pipe", "htp_antimatter_pipe", Uberutilities.id("block/casing/pipe/htp_antimatter_pipe"));
 	public static final BlockEntry<Block> HTP_PUMP = createCasing("Encased High-Throughput Fluid Pump", "htp_pump", Uberutilities.id("block/casing/pipe/htp_pump"));
 
-	public static final BlockEntry<Block>[] EMISSION_CASINGS = (BlockEntry<Block>[]) new Object[GTValues.TIER_COUNT];
+	public static final BlockEntry<Block> EMISSION_CASING_LV = createEmissionCasing(GTValues.LV);
+	public static final BlockEntry<Block> EMISSION_CASING_MV = createEmissionCasing(GTValues.MV);
+	public static final BlockEntry<Block> EMISSION_CASING_HV = createEmissionCasing(GTValues.HV);
+	public static final BlockEntry<Block> EMISSION_CASING_EV = createEmissionCasing(GTValues.EV);
+	public static final BlockEntry<Block> EMISSION_CASING_IV = createEmissionCasing(GTValues.IV);
+	public static final BlockEntry<Block> EMISSION_CASING_LuV = createEmissionCasing(GTValues.LuV);
+	public static final BlockEntry<Block> EMISSION_CASING_ZPM = createEmissionCasing(GTValues.ZPM);
+	public static final BlockEntry<Block> EMISSION_CASING_UV = createEmissionCasing(GTValues.UV);
+	public static final BlockEntry<Block> EMISSION_CASING_UHV = createEmissionCasing(GTValues.UHV);
+	public static final BlockEntry<Block> EMISSION_CASING_UEV = createEmissionCasing(GTValues.UEV);
+	public static final BlockEntry<Block> EMISSION_CASING_UIV = createEmissionCasing(GTValues.UIV);
+	public static final BlockEntry<Block> EMISSION_CASING_UXV = createEmissionCasing(GTValues.UXV);
+	public static final BlockEntry<Block> EMISSION_CASING_OpV = createEmissionCasing(GTValues.OpV);
+	public static final BlockEntry<Block> EMISSION_CASING_MAX = createEmissionCasing(GTValues.MAX);
+	public static final List<BlockEntry<Block>> EMISSION_CASINGS = Arrays.asList(
+		EMISSION_CASING_LV,
+		EMISSION_CASING_MV,
+		EMISSION_CASING_HV,
+		EMISSION_CASING_EV,
+		EMISSION_CASING_IV,
+		EMISSION_CASING_LuV,
+		EMISSION_CASING_ZPM,
+		EMISSION_CASING_UV,
+		EMISSION_CASING_UHV,
+		EMISSION_CASING_UEV,
+		EMISSION_CASING_UIV,
+		EMISSION_CASING_UXV,
+		EMISSION_CASING_OpV,
+		EMISSION_CASING_MAX
+	);
 	
 	public static final BlockEntry<ShapeableBlock> NEUTRON_GLASS = UBER_REGISTRATE.block("neutron_glass", props -> new ShapeableBlock(props,
 			Shapes.box(1d/16, 1d/16, 1d/16, 15d/16, 15d/16, 15d/16), //center
@@ -81,9 +112,5 @@ public class Uberblocks {
 		LOGGER.info("Registering custom blocks");
 		Method[] renderTypes = RenderType.class.getMethods();
 		for (Method method : renderTypes) {LOGGER.info("Method: {}", method.getName());}
-		
-		for (int tier : GTValues.ALL_TIERS) {
-			EMISSION_CASINGS[tier] = createEmissionCasing(tier);
-		}
 	}
 }
