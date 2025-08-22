@@ -1,0 +1,23 @@
+{
+  "values": [
+    "uberutilities:neutronium_casing",
+    "uberutilities:naquadah_casing",
+    "uberutilities:htp_matter_pipe",
+    "uberutilities:htp_antimatter_pipe",
+    "uberutilities:htp_pump",
+    "uberutilities:lv_emission_casing",
+    "uberutilities:mv_emission_casing",
+    "uberutilities:hv_emission_casing",
+    "uberutilities:ev_emission_casing",
+    "uberutilities:iv_emission_casing",
+    "uberutilities:luv_emission_casing",
+    "uberutilities:zpm_emission_casing",
+    "uberutilities:uv_emission_casing",
+    "uberutilities:uhv_emission_casing",
+    "uberutilities:uev_emission_casing",
+    "uberutilities:uiv_emission_casing",
+    "uberutilities:uxv_emission_casing",
+    "uberutilities:opv_emission_casing",
+    "uberutilities:max_emission_casing"
+  ]
+}
