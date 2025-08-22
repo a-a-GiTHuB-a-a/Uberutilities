@@ -18,12 +18,7 @@ import com.gregtechceu.gtceu.api.pattern.Predicates;
 import com.gregtechceu.gtceu.api.recipe.OverclockingLogic;
 import com.gregtechceu.gtceu.common.data.GTBlocks;
 import com.gregtechceu.gtceu.common.data.GTRecipeModifiers;
-import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.level.block.Block;
-
-import java.util.Arrays;
 
 public class QuantumFieldExciter {
 	public static final MultiblockMachineDefinition FIELD_EXCITER = UBER_REGISTRATE.multiblock("field_exciter", WorkableElectricMultiblockMachine::new)
@@ -53,7 +48,7 @@ public class QuantumFieldExciter {
 			.aisle("                     ", "                     ", "                     ", "        NNNNN        ", "      NNQQQQQNN      ", "      NNQQQQQNN      ", "    NNQQ-----QQNN    ", "    NNQQ-----QQNN    ", "   NQQ---------QQN   ", "   NQQ---------QQN   ", "   NQQ---------QQN   ", "   NQQ---------QQN   ", "   NQQ---------QQN   ", "    NNQQ-----QQNN    ", "    NNQQ-----QQNN    ", "      NNQQQQQNN      ", "      NNQQQQQNN      ", "        NNNNN        ", "                     ", "                     ", "                     ")
 			.aisle("                     ", "                     ", "                     ", "                     ", "        NNNNN        ", "        NNNNN        ", "      NNQQQQQNN      ", "      NNQQQQQNN      ", "    NNQQ-----QQNN    ", "    NNQQ-----QQNN    ", "    NNQQ-----QQNN    ", "    NNQQ-----QQNN    ", "    NNQQ-----QQNN    ", "      NNQQQQQNN      ", "      NNQQQQQNN      ", "        NNNNN        ", "        NNNNN        ", "                     ", "                     ", "                     ", "                     ")
 			.aisle("                     ", "                     ", "                     ", "                     ", "                     ", "                     ", "        NNNNN        ", "        NNNNN        ", "      NNQQQQQNN      ", "      NNQQQQQNN      ", "      NNQQQQQNN      ", "      NNQQQQQNN      ", "      NNQQQQQNN      ", "        NNNNN        ", "        NNNNN        ", "                     ", "                     ", "                     ", "                     ", "                     ", "                     ")
-			.aisle("                     ", "                     ", "                     ", "                     ", "                     ", "                     ", "                     ", "                     ", "        NNNNN        ", "        NNNNN        ", "        NNCNN        ", "        NNNNN        ", "        NNNNN        ", "                     ", "                     ", "                     ", "                     ", "                     ", "                     ", "                     ", "                     ")
+			.aisle("                     ", "                     ", "                     ", "                     ", "                     ", "                     ", "                     ", "                     ", "        BBBBB        ", "        BBBBB        ", "        BBCBB        ", "        BBBBB        ", "        BBBBB        ", "                     ", "                     ", "                     ", "                     ", "                     ", "                     ", "                     ", "                     ")
 			.where(" ", Predicates.any())
 			.where("-", Predicates.air())
 			.where("C", Predicates.controller(Predicates.blocks(definition.get())))
@@ -65,9 +60,9 @@ public class QuantumFieldExciter {
 			.where("G", Predicates.blocks(Uberblocks.HTP_ANTIMATTER_PIPE.get()))
 			.where("I", Predicates.blocks(Uberblocks.HTP_MATTER_PIPE.get()))
 			.where("P", Predicates.blocks(Uberblocks.HTP_PUMP.get()))
-			.where("D", Predicates.blocks(GTBlocks.SUPERCONDUCTING_COIL.get()))
-			.where("K", Predicates.heatingCoils())
 			.where("S", Predicates.blocks(GTBlocks.SUPERCONDUCTING_COIL.get()))
+			.where("K", Predicates.heatingCoils())
+			.where("B", Predicates.blocks(Uberblocks.NEUTRONIUM_MACHINE_CASING.get()).or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setExactLimit(1)))
 			.build()
 		)
 		//spotless:on
