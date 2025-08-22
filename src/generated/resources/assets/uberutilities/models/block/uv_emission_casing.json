@@ -1,8 +1,0 @@
-{
-  "parent": "uberutilities:block/emission_casing",
-  "textures": {
-    "base_bottom": "gtceu:block/casings/voltage/uv/bottom",
-    "base_side": "gtceu:block/casings/voltage/uv/side",
-    "base_top": "gtceu:block/casings/voltage/uv/top"
-  }
-}
