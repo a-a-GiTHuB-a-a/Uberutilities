@@ -6,7 +6,7 @@ import com.daboxen.uberutilities.api.RecipeTypes;
 import static com.daboxen.uberutilities.Uberutilities.LOGGER;
 import static com.daboxen.uberutilities.Uberutilities.UBER_REGISTRATE;
 import com.gregtechceu.gtceu.GTCEu;
-import static com.gregtechceu.gtceu.common.data.GTMaterials.*;
+import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.data.RotationState;
 import com.gregtechceu.gtceu.api.data.chemical.ChemicalHelper;
 import com.gregtechceu.gtceu.api.data.tag.TagPrefix;
@@ -17,6 +17,8 @@ import com.gregtechceu.gtceu.api.pattern.FactoryBlockPattern;
 import com.gregtechceu.gtceu.api.pattern.Predicates;
 import com.gregtechceu.gtceu.api.recipe.OverclockingLogic;
 import com.gregtechceu.gtceu.common.data.GTBlocks;
+import com.gregtechceu.gtceu.common.data.GTMachines;
+import static com.gregtechceu.gtceu.common.data.GTMaterials.*;
 import com.gregtechceu.gtceu.common.data.GTRecipeModifiers;
 import net.minecraft.network.chat.Component;
 
@@ -28,7 +30,7 @@ public class QuantumFieldExciter {
 		.appearanceBlock(Uberblocks.NEUTRONIUM_MACHINE_CASING)
 		//spotless:off
 		.pattern(definition -> FactoryBlockPattern.start()
-			.aisle("                     ", "                     ", "                     ", "                     ", "                     ", "                     ", "                     ", "                     ", "        NNNNN        ", "        NNNNN        ", "        NNENN        ", "        NNNNN        ", "        NNNNN        ", "                     ", "                     ", "                     ", "                     ", "                     ", "                     ", "                     ", "                     ")
+			.aisle("                     ", "                     ", "                     ", "                     ", "                     ", "                     ", "                     ", "                     ", "        BBBBB        ", "        BBBBB        ", "        BBEBB        ", "        BBBBB        ", "        BBBBB        ", "                     ", "                     ", "                     ", "                     ", "                     ", "                     ", "                     ", "                     ")
 			.aisle("                     ", "                     ", "                     ", "                     ", "                     ", "                     ", "        NNNNN        ", "        NNNNN        ", "      NNQQQQQNN      ", "      NNQQQQQNN      ", "      NNQQSQQNN      ", "      NNQQQQQNN      ", "      NNQQQQQNN      ", "        NNNNN        ", "        NNNNN        ", "                     ", "                     ", "                     ", "                     ", "                     ", "                     ")
 			.aisle("                     ", "                     ", "                     ", "                     ", "        NNNNN        ", "        NNNNN        ", "      NNQQQQQNN      ", "      NNQQQQQNN      ", "    NNQQ-----QQNN    ", "    NNQQ--F--QQNN    ", "    NNQQ-FSF-QQNN    ", "    NNQQ--F--QQNN    ", "    NNQQ-----QQNN    ", "      NNQQQQQNN      ", "      NNQQQQQNN      ", "        NNNNN        ", "        NNNNN        ", "                     ", "                     ", "                     ", "                     ")
 			.aisle("                     ", "                     ", "                     ", "        NNNNN        ", "      NNQQQQQNN      ", "      NNQQQQQNN      ", "    NNQQ-----QQNN    ", "    NNQQ-----QQNN    ", "   NQQ---------QQN   ", "   NQQ----F----QQN   ", "   NQQ---FSF---QQN   ", "   NQQ----F----QQN   ", "   NQQ---------QQN   ", "    NNQQ-----QQNN    ", "    NNQQ-----QQNN    ", "      NNQQQQQNN      ", "      NNQQQQQNN      ", "        NNNNN        ", "                     ", "                     ", "                     ")
@@ -48,13 +50,13 @@ public class QuantumFieldExciter {
 			.aisle("                     ", "                     ", "                     ", "        NNNNN        ", "      NNQQQQQNN      ", "      NNQQQQQNN      ", "    NNQQ-----QQNN    ", "    NNQQ-----QQNN    ", "   NQQ---------QQN   ", "   NQQ---------QQN   ", "   NQQ---------QQN   ", "   NQQ---------QQN   ", "   NQQ---------QQN   ", "    NNQQ-----QQNN    ", "    NNQQ-----QQNN    ", "      NNQQQQQNN      ", "      NNQQQQQNN      ", "        NNNNN        ", "                     ", "                     ", "                     ")
 			.aisle("                     ", "                     ", "                     ", "                     ", "        NNNNN        ", "        NNNNN        ", "      NNQQQQQNN      ", "      NNQQQQQNN      ", "    NNQQ-----QQNN    ", "    NNQQ-----QQNN    ", "    NNQQ-----QQNN    ", "    NNQQ-----QQNN    ", "    NNQQ-----QQNN    ", "      NNQQQQQNN      ", "      NNQQQQQNN      ", "        NNNNN        ", "        NNNNN        ", "                     ", "                     ", "                     ", "                     ")
 			.aisle("                     ", "                     ", "                     ", "                     ", "                     ", "                     ", "        NNNNN        ", "        NNNNN        ", "      NNQQQQQNN      ", "      NNQQQQQNN      ", "      NNQQQQQNN      ", "      NNQQQQQNN      ", "      NNQQQQQNN      ", "        NNNNN        ", "        NNNNN        ", "                     ", "                     ", "                     ", "                     ", "                     ", "                     ")
-			.aisle("                     ", "                     ", "                     ", "                     ", "                     ", "                     ", "                     ", "                     ", "        BBBBB        ", "        BBBBB        ", "        BBCBB        ", "        BBBBB        ", "        BBBBB        ", "                     ", "                     ", "                     ", "                     ", "                     ", "                     ", "                     ", "                     ")
+			.aisle("                     ", "                     ", "                     ", "                     ", "                     ", "                     ", "                     ", "                     ", "        NNNNN        ", "        NNNNN        ", "        NNCNN        ", "        NNNNN        ", "        NNNNN        ", "                     ", "                     ", "                     ", "                     ", "                     ", "                     ", "                     ", "                     ")
 			.where(" ", Predicates.any())
 			.where("-", Predicates.air())
 			.where("C", Predicates.controller(Predicates.blocks(definition.get())))
 			.where("E", Predicates.abilities(PartAbility.INPUT_ENERGY))
 			.where("H", Predicates.abilities(PartAbility.EXPORT_FLUIDS_1X))
-			.where("N", Predicates.blocks(Uberblocks.NEUTRONIUM_MACHINE_CASING.get()))
+			.where("N", Predicates.blocks(Uberblocks.NEUTRONIUM_MACHINE_CASING.get()).or(Predicates.autoAbilities(true, false, false)))
 			.where("Q", Predicates.blocks(Uberblocks.NAQUADAH_MACHINE_CASING.get()))
 			.where("F", Predicates.blocks(ChemicalHelper.getBlock(TagPrefix.frameGt, NaquadahAlloy)))
 			.where("G", Predicates.blocks(Uberblocks.HTP_ANTIMATTER_PIPE.get()))
@@ -62,7 +64,7 @@ public class QuantumFieldExciter {
 			.where("P", Predicates.blocks(Uberblocks.HTP_PUMP.get()))
 			.where("S", Predicates.blocks(GTBlocks.SUPERCONDUCTING_COIL.get()))
 			.where("K", Predicates.heatingCoils())
-			.where("B", Predicates.blocks(Uberblocks.NEUTRONIUM_MACHINE_CASING.get()).or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setExactLimit(1)))
+			.where("B", Predicates.blocks(Uberblocks.NEUTRONIUM_MACHINE_CASING.get()).or(Predicates.blocks(GTMachines.ITEM_IMPORT_BUS[GTValues.ULV].get()).setExactLimit(1)))
 			.build()
 		)
 		//spotless:on
