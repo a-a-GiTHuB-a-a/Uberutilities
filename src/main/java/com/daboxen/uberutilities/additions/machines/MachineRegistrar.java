@@ -6,6 +6,6 @@ public class MachineRegistrar {
 	public static void init() {
 		LOGGER.info("Registering custom machines");
 		Singleblocks.init();
-		QuantumFieldExciter.init();
+		MassQuantumCollider.init();
 	}
 }

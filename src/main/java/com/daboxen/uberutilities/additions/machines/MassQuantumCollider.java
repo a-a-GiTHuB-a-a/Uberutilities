@@ -22,10 +22,10 @@ import static com.gregtechceu.gtceu.common.data.GTMaterials.*;
 import com.gregtechceu.gtceu.common.data.GTRecipeModifiers;
 import net.minecraft.network.chat.Component;
 
-public class QuantumFieldExciter {
-	public static final MultiblockMachineDefinition FIELD_EXCITER = UBER_REGISTRATE.multiblock("field_exciter", WorkableElectricMultiblockMachine::new)
+public class MassQuantumCollider {
+	public static final MultiblockMachineDefinition MASS_COLLIDER = UBER_REGISTRATE.multiblock("field_exciter", WorkableElectricMultiblockMachine::new)
 		.rotationState(RotationState.ALL)
-		.recipeType(RecipeTypes.FIELD_EXCITER)
+		.recipeType(RecipeTypes.MASS_COLLIDER)
 		.recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.create(1/3.6, OverclockingLogic.STD_VOLTAGE_FACTOR, true)))
 		.appearanceBlock(Uberblocks.NEUTRONIUM_MACHINE_CASING)
 		//spotless:off
@@ -41,7 +41,7 @@ public class QuantumFieldExciter {
 			.aisle("        NNNNN        ", "      NNQQQQQNN      ", "    NNQQ-----QQNN    ", "   NQQ---------QQN   ", "  NQ-------------QN  ", "  NQ-------------QN  ", " NQ---------------QN ", " NQ---------------QN ", "NQ-----------------QN", "NQ-----------------QN", "NQ--------S--------QN", "NQ-----------------QN", "NQ-----------------QN", " NQ---------------QN ", " NQ---------------QN ", "  NQ-------------QN  ", "  NQ-------------QN  ", "   NQQ---------QQN   ", "    NNQQ-----QQNN    ", "      NNQQQQQNN      ", "        NNNNN        ")
 			.aisle("        NNNNN        ", "      NNQQQQQNN      ", "    NNQQ--F--QQNN    ", "   NQQ----F----QQN   ", "  NQ------F------QN  ", "  NQ------F------QN  ", " NQ-------F-------QN ", " NQ---------------QN ", "NQ-----------------QN", "NQ-----------------QN", "NQFFFFF---K---FFFFFQN", "NQ-----------------QN", "NQ-----------------QN", " NQ---------------QN ", " NQ-------F-------QN ", "  NQ------F------QN  ", "  NQ------F------QN  ", "   NQQ----F----QQN   ", "    NNQQ--F--QQNN    ", "      NNQQQQQNN      ", "        NNNNN        ")
 			.aisle("        NNHNN        ", "      NNQQIQQNN      ", "    NNQQ-FIF-QQNN    ", "   NQQ---FIF---QQN   ", "  NQ-----FIF-----QN  ", "  NQ-----FIF-----QN  ", " NQ------FIF------QN ", " NQ-------I-------QN ", "NQ--------I--------QN", "NQFFFFF---P---FFFFFQN", "HGGGGGGGGP-PGGGGGGGGH", "NQFFFFF---P---FFFFFQN", "NQ--------I--------QN", " NQ-------I-------QN ", " NQ------FIF------QN ", "  NQ-----FIF-----QN  ", "  NQ-----FIF-----QN  ", "   NQQ---FIF---QQN   ", "    NNQQ-FIF-QQNN    ", "      NNQQIQQNN      ", "        NNHNN        ")
-			.aisle("        NNNNN        ", "      NNQQQQQNN      ", "    NNQQ--F--QQNN    ", "   NQQ----F----QQN   ", "  NQ------F------QN  ", "  NQ------F------QN  ", " NQ-------F-------QN ", " NQ---------------QN ", "NQ-----------------QN", "NQ-----------------QN", "NQFFFFF-------FFFFFQN", "NQ-----------------QN", "NQ-----------------QN", " NQ---------------QN ", " NQ-------F-------QN ", "  NQ------F------QN  ", "  NQ------F------QN  ", "   NQQ----F----QQN   ", "    NNQQ--F--QQNN    ", "      NNQQQQQNN      ", "        NNNNN        ")
+			.aisle("        NNNNN        ", "      NNQQQQQNN      ", "    NNQQ--F--QQNN    ", "   NQQ----F----QQN   ", "  NQ------F------QN  ", "  NQ------F------QN  ", " NQ-------F-------QN ", " NQ---------------QN ", "NQ-----------------QN", "NQ-----------------QN", "NQFFFFF---Q---FFFFFQN", "NQ-----------------QN", "NQ-----------------QN", " NQ---------------QN ", " NQ-------F-------QN ", "  NQ------F------QN  ", "  NQ------F------QN  ", "   NQQ----F----QQN   ", "    NNQQ--F--QQNN    ", "      NNQQQQQNN      ", "        NNNNN        ")
 			.aisle("        NNNNN        ", "      NNQQQQQNN      ", "    NNQQ-----QQNN    ", "   NQQ---------QQN   ", "  NQ-------------QN  ", "  NQ-------------QN  ", " NQ---------------QN ", " NQ---------------QN ", "NQ-----------------QN", "NQ-----------------QN", "NQ-----------------QN", "NQ-----------------QN", "NQ-----------------QN", " NQ---------------QN ", " NQ---------------QN ", "  NQ-------------QN  ", "  NQ-------------QN  ", "   NQQ---------QQN   ", "    NNQQ-----QQNN    ", "      NNQQQQQNN      ", "        NNNNN        ")
 			.aisle("                     ", "        NNNNN        ", "      NNQQQQQNN      ", "    NNQQ-----QQNN    ", "   NQQ---------QQN   ", "   NQ-----------QN   ", "  NQ-------------QN  ", "  NQ-------------QN  ", " NQ---------------QN ", " NQ---------------QN ", " NQ---------------QN ", " NQ---------------QN ", " NQ---------------QN ", "  NQ-------------QN  ", "  NQ-------------QN  ", "   NQ-----------QN   ", "   NQQ---------QQN   ", "    NNQQ-----QQNN    ", "      NNQQQQQNN      ", "        NNNNN        ", "                     ")
 			.aisle("                     ", "        NNNNN        ", "      NNQQQQQNN      ", "    NNQQ-----QQNN    ", "   NQQ---------QQN   ", "   NQ-----------QN   ", "  NQ-------------QN  ", "  NQ-------------QN  ", " NQ---------------QN ", " NQ---------------QN ", " NQ---------------QN ", " NQ---------------QN ", " NQ---------------QN ", "  NQ-------------QN  ", "  NQ-------------QN  ", "   NQ-----------QN   ", "   NQQ---------QQN   ", "    NNQQ-----QQNN    ", "      NNQQQQQNN      ", "        NNNNN        ", "                     ")
@@ -69,11 +69,11 @@ public class QuantumFieldExciter {
 		)
 		//spotless:on
 		.workableCasingModel(Uberutilities.id("block/casing/solid/neutronium_casing"), GTCEu.id("block/multiblock/fusion_reactor"))
-		.tooltips(Component.translatable("machine.uberutilities.field_exciter.tooltip.0"))
-		.langValue("Quantum Field Exciter")
+		.tooltips(Component.translatable("machine.uberutilities.mass_collider.tooltip.0"))
+		.langValue("Mass Quantum Collider")
 		.register();
 	
 	public static void init() {
-		LOGGER.info("Registering the QFE");
+		LOGGER.info("Registering the MQC");
 	}
 }

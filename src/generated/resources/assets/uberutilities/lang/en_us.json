@@ -1,5 +1,5 @@
 {
-  "block.uberutilities.field_exciter": "Quantum Field Exciter",
+  "block.uberutilities.field_exciter": "Mass Quantum Collider",
   "block.uberutilities.htp_antimatter_pipe": "Encased High-Throughput Antimatter Pipe",
   "block.uberutilities.htp_matter_pipe": "Encased High-Throughput Matter Pipe",
   "block.uberutilities.htp_pump": "Encased High-Throughput Fluid Pump",
@@ -10,7 +10,7 @@
   "item.uberutilities.neutrino_processor_assembly": "Neutrino Processor Assembly",
   "item.uberutilities.neutrino_processor_computer": "Neutrino Processor Computer",
   "item.uberutilities.neutrino_processor_mainframe": "Neutrino Processor Mainframe",
-  "machine.uberutilities.field_exciter.tooltip.0": "Making matter out of pure energy",
+  "machine.uberutilities.mass_collider.tooltip.0": "Mass-producing quantum particles",
   "material.uberutilities.amogusium": "Amogusium",
   "material.uberutilities.anti_down_quark": "Anti Down Quark",
   "material.uberutilities.anti_neutronium": "Anti-Neutronium",

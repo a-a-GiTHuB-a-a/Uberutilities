@@ -10,7 +10,7 @@ import com.gregtechceu.gtceu.common.data.GTSoundEntries;
 import com.lowdragmc.lowdraglib.gui.texture.ProgressTexture;
 
 public class RecipeTypes {
-	public static final GTRecipeType FIELD_EXCITER = GTRecipeTypes.register("field_exciter", GTRecipeTypes.MULTIBLOCK)
+	public static final GTRecipeType MASS_COLLIDER = GTRecipeTypes.register("mass_collider", GTRecipeTypes.MULTIBLOCK)
 		.setMaxIOSize(1, 0, 0, 2)
 		.setProgressBar(GuiTextures.PROGRESS_BAR_FUSION, ProgressTexture.FillDirection.LEFT_TO_RIGHT)
 		.setSound(GTSoundEntries.ELECTROLYZER)

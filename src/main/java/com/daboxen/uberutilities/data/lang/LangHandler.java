@@ -24,7 +24,7 @@ public class LangHandler {
 		provider.add("uberutilities.fluid.type_antimatter.tooltip", "§khello§r§c§lANTIMATTER! HANDLE WITH EXTREME CAUTION!§r§kworld§r");
 		provider.add("uberutilities.fluid_pipe.antimatter_proof", "§khello§r§c§lCapable of containing antimatter§r§kworld§r");
 		
-		provider.add("machine.uberutilities.field_exciter.tooltip.0", "Making matter out of pure energy");
+		provider.add("machine.uberutilities.mass_collider.tooltip.0", "Mass-producing quantum particles");
 		
 		for (Map.Entry<Supplier<String>, String> entry : replacements.entrySet()) {
 			String key = entry.getKey().get();
